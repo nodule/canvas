@@ -11,7 +11,6 @@
     "input": {
       "context": {
         "title": "Context",
-        "async": true,
         "type": "CanvasRenderingContext2D",
         "required": "true"
       },

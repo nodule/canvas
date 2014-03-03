@@ -1,11 +1,11 @@
 {
-  "name": "translate",
+  "name": "createImageData",
   "ns": "canvas",
   "async": true,
-  "title": "Translate",
-  "description": "Moves the origin point of the context to (x, y)",
+  "title": "Create Image Data",
+  "description": "Creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black",
   "phrases": {
-    "active": "Translating context"
+    "active": "Creating image data"
   },
   "ports": {
     "input": {
@@ -14,14 +14,17 @@
         "type": "CanvasRenderingContext2D",
         "required": "true"
       },
+      "image": {
+        "title": "imagedata",
+        "type": "ImageData"
+      },
       "in": {
-        "title": "Point",
+        "title": "Dimensions",
         "async": true,
         "type": "array",
-        "required": "true",
         "items": [
-          { "type": "number", "title": "X" },
-          { "type": "number", "title": "Y" }
+          { "type": "number", "title": "Width" },
+          { "type": "number", "title": "Height" }
         ],
         "minItems": 2,
         "maxItems": 2

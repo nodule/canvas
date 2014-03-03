@@ -1,0 +1,31 @@
+{
+  "name": "getContext",
+  "ns": "canvas",
+  "async": true,
+  "title": "Get Context",
+  "description": "Get Canvas Context",
+  "phrases": {
+    "active": "Getting context"
+  },
+  "ports": {
+    "input": {
+      "canvas": {
+        "title": "Canvas",
+        "async": true,
+        "type": "HTMLElement",
+        "required": "true"
+      },
+      "type": {
+        "title": "Type",
+        "enum": ["2d","3d"],
+        "default": "2d"
+      }
+    },
+    "output": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D"
+      }
+    }
+  }
+}
