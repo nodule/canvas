@@ -1,0 +1,26 @@
+{
+  "name": "stroke",
+  "ns": "canvas",
+  "async": true,
+  "title": "Stroke",
+  "description": "Stroke",
+  "phrases": {
+    "active": "Stroking path"
+  },
+  "ports": {
+    "input": {
+      "context": {
+        "title": "Context",
+        "async": true,
+        "type": "CanvasRenderingContext2D",
+        "required": "true"
+      }
+    },
+    "output": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D"
+      }
+    }
+  }
+}

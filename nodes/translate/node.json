@@ -1,0 +1,42 @@
+{
+  "name": "translate",
+  "ns": "canvas",
+  "async": true,
+  "title": "Translate",
+  "description": "Moves the origin point of the context to (x, y)",
+  "phrases": {
+    "active": "Translating context"
+  },
+  "ports": {
+    "input": {
+      "context": {
+        "title": "Context",
+        "async": true,
+        "type": "CanvasRenderingContext2D",
+        "required": "true"
+      },
+      "in": {
+        "title": "Point",
+        "async": true,
+        "type": "array",
+        "required": "true",
+        "items": [
+          { "type": "number", "title": "X" },
+          { "type": "number", "title": "Y" }
+        ],
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "output": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D"
+      },
+      "out": {
+        "title": "Point",
+        "type": "array"
+      }
+    }
+  }
+}

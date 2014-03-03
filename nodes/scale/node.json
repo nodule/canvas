@@ -1,0 +1,38 @@
+{
+  "name": "scale",
+  "ns": "canvas",
+  "async": true,
+  "title": "Scale",
+  "description": "Scale",
+  "phrases": {
+    "active": "Scaling"
+  },
+  "ports": {
+    "input": {
+      "context": {
+        "title": "Context",
+        "async": true,
+        "type": "CanvasRenderingContext2D",
+        "required": "true"
+      },
+      "in": {
+        "title": "Scaling factor x/y",
+        "async": true,
+        "type": "array",
+        "required": "true",
+        "items": [
+          { "type": "number", "title": "X" },
+          { "type": "number", "title": "Y" }
+        ],
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "output": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "commit",
+  "ns": "canvas",
+  "async": true,
+  "title": "Commit",
+  "description": "Commit Context",
+  "phrases": {
+    "active": "Committing context"
+  },
+  "ports": {
+    "input": {
+      "context": {
+        "title": "Context",
+        "async": true,
+        "type": "CanvasRenderingContext2D",
+        "required": "true"
+      }
+    },
+    "output": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "save",
+  "ns": "canvas",
+  "async": true,
+  "title": "Save",
+  "description": "Save Context",
+  "phrases": {
+    "active": "Saving context"
+  },
+  "ports": {
+    "input": {
+      "context": {
+        "title": "Context",
+        "async": true,
+        "type": "CanvasRenderingContext2D",
+        "required": "true"
+      }
+    },
+    "output": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D"
+      }
+    }
+  }
+}

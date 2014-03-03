@@ -1,0 +1,27 @@
+{
+  "name": "nodule-canvas",
+  "description": "Canvas for Chiχ",
+  "author": "Rob Halff <rob.halff@gmail.com>",
+  "version": "0.0.2",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/canvas.git"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "main": "x",
+  "scripts": {
+    "test": "chit -r"
+  },
+  "devDependencies": {
+    "chit": "0.x.x"
+  },
+  "chix": {
+    "name": "canvas",
+    "color": "rgb(35,116,136)"
+  },
+  "dependencies": {
+  }
+}

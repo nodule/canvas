@@ -1,0 +1,35 @@
+{
+  "name": "measureText",
+  "ns": "canvas",
+  "async": true,
+  "title": "Measure Text",
+  "description": "Measure Text",
+  "phrases": {
+    "active": "Measuring text"
+  },
+  "ports": {
+    "input": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D",
+        "required": "true"
+      },
+      "text": {
+        "title": "Text",
+        "type": "string",
+        "async": true,
+        "required": "true"
+      }
+    },
+    "output": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D"
+      },
+      "metrics": {
+        "title": "Text Metrics",
+        "type": "nsIDOMTextMetrics"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "beginPath",
+  "ns": "canvas",
+  "async": true,
+  "title": "Begin Path",
+  "description": "Begin path",
+  "phrases": {
+    "active": "Beginning path"
+  },
+  "ports": {
+    "input": {
+      "context": {
+        "title": "Context",
+        "async": true,
+        "type": "CanvasRenderingContext2D",
+        "required": "true"
+      }
+    },
+    "output": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D"
+      }
+    }
+  }
+}

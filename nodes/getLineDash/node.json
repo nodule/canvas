@@ -1,0 +1,30 @@
+{
+  "name": "getLineDash",
+  "ns": "canvas",
+  "async": true,
+  "title": "Get Line Dash",
+  "description": "Get Line Dash",
+  "phrases": {
+    "active": "Getting line dash"
+  },
+  "ports": {
+    "input": {
+      "context": {
+        "title": "Context",
+        "async": true,
+        "type": "CanvasRenderingContext2D",
+        "required": "true"
+      }
+    },
+    "output": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D"
+      },
+      "out": {
+        "title": "Segment",
+        "type": "array"
+      }
+    }
+  }
+}
