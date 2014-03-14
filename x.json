@@ -393,24 +393,20 @@
           "in": {
             "title": "Point",
             "async": true,
-            "type": "array",
+            "type": "object",
             "required": "true",
-            "items": [
-              {
-                "name": "x",
+            "properties": {
+              "x": {
                 "type": "number",
                 "title": "X",
                 "description": "The x axis of the coordinate for the end of the line"
               },
-              {
-                "name": "y",
+              "y": {
                 "type": "number",
                 "title": "Y",
                 "description": "The y axis of the coordinate for the end of the line"
               }
-            ],
-            "minItems": 2,
-            "maxItems": 2
+            }
           }
         },
         "output": {
@@ -432,7 +428,7 @@
       "async": true,
       "ns": "canvas",
       "name": "lineTo",
-      "fn": "on.input.in = function() {\n  input.context.lineTo(data[0], data[1]);\n  output({\n    context: input.context,\n    out: data\n  });\n};\n"
+      "fn": "on.input.in = function() {\n  input.context.lineTo(data.x, data.y);\n  output({\n    context: input.context,\n    out: data\n  });\n};\n"
     },
     {
       "ports": {
@@ -481,22 +477,18 @@
           "in": {
             "title": "Point",
             "async": true,
-            "type": "array",
+            "type": "object",
             "required": "true",
-            "items": [
-              {
-                "name": "x",
+            "properties": {
+              "x": {
                 "type": "number",
                 "title": "X"
               },
-              {
-                "name": "y",
+              "y": {
                 "type": "number",
                 "title": "Y"
               }
-            ],
-            "minItems": 2,
-            "maxItems": 2
+            }
           }
         },
         "output": {
@@ -518,7 +510,7 @@
       "async": true,
       "ns": "canvas",
       "name": "moveTo",
-      "fn": "on.input.in = function() {\n  input.context.moveTo(data[0], data[1]);\n  output({\n    context: input.context,\n    out: data\n  });\n};\n"
+      "fn": "on.input.in = function() {\n  input.context.moveTo(data.x, data.y);\n  output({\n    context: input.context,\n    out: data\n  });\n};\n"
     },
     {
       "ports": {

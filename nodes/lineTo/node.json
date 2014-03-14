@@ -17,14 +17,12 @@
       "in": {
         "title": "Point",
         "async": true,
-        "type": "array",
+        "type": "object",
         "required": "true",
-        "items": [
-          { "name": "x", "type": "number", "title": "X", "description": "The x axis of the coordinate for the end of the line" },
-          { "name": "y", "type": "number", "title": "Y", "description": "The y axis of the coordinate for the end of the line"  }
-        ],
-        "minItems": 2,
-        "maxItems": 2
+        "properties": {
+          "x": { "type": "number", "title": "X", "description": "The x axis of the coordinate for the end of the line" },
+          "y": { "type": "number", "title": "Y", "description": "The y axis of the coordinate for the end of the line"  }
+        }
       }
     },
     "output": {
