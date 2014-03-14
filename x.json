@@ -578,7 +578,7 @@
         "active": "Restoring"
       },
       "description": "Restore Context",
-      "title": "Rotate",
+      "title": "Restore",
       "async": true,
       "ns": "canvas",
       "name": "restore",

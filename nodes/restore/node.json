@@ -2,7 +2,7 @@
   "name": "restore",
   "ns": "canvas",
   "async": true,
-  "title": "Rotate",
+  "title": "Restore",
   "description": "Restore Context",
   "phrases": {
     "active": "Restoring"
