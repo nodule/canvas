@@ -603,10 +603,6 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D"
-          },
-          "rotation": {
-            "title": "Rotation",
-            "type": "number"
           }
         }
       },
@@ -618,7 +614,7 @@
       "async": true,
       "ns": "canvas",
       "name": "rotate",
-      "fn": "on.input.angle = function() {\n  input.context.rotate(data);\n  output({\n    context: input.context,\n    rotation: input.context.attrs.rotation\n  });\n};\n"
+      "fn": "on.input.angle = function() {\n  input.context.rotate(data);\n  output({\n    context: input.context\n  });\n};\n"
     },
     {
       "ports": {

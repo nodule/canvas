@@ -25,10 +25,6 @@
       "context": {
         "title": "Context",
         "type": "CanvasRenderingContext2D"
-      },
-      "rotation": {
-        "title": "Rotation",
-        "type": "number"
       }
     }
   }
