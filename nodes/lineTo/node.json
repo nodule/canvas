@@ -20,8 +20,8 @@
         "type": "array",
         "required": "true",
         "items": [
-          { "type": "number", "title": "X", "description": "The x axis of the coordinate for the end of the line" },
-          { "type": "number", "title": "Y", "description": "The y axis of the coordinate for the end of the line"  }
+          { "name": "x", "type": "number", "title": "X", "description": "The x axis of the coordinate for the end of the line" },
+          { "name": "y", "type": "number", "title": "Y", "description": "The y axis of the coordinate for the end of the line"  }
         ],
         "minItems": 2,
         "maxItems": 2

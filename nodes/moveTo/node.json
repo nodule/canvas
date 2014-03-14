@@ -20,8 +20,8 @@
         "type": "array",
         "required": "true",
         "items": [
-          { "type": "number", "title": "X" },
-          { "type": "number", "title": "Y" }
+          { "name": "x", "type": "number", "title": "X" },
+          { "name": "y", "type": "number", "title": "Y" }
         ],
         "minItems": 2,
         "maxItems": 2

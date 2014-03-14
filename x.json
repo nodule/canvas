@@ -397,11 +397,13 @@
             "required": "true",
             "items": [
               {
+                "name": "x",
                 "type": "number",
                 "title": "X",
                 "description": "The x axis of the coordinate for the end of the line"
               },
               {
+                "name": "y",
                 "type": "number",
                 "title": "Y",
                 "description": "The y axis of the coordinate for the end of the line"
@@ -483,10 +485,12 @@
             "required": "true",
             "items": [
               {
+                "name": "x",
                 "type": "number",
                 "title": "X"
               },
               {
+                "name": "y",
                 "type": "number",
                 "title": "Y"
               }
