@@ -341,7 +341,7 @@
       "async": true,
       "ns": "canvas",
       "name": "getContext",
-      "fn": "on.input.canvas = function() {\n  data.getContext('2d');\n  output({ context: data });\n};\n"
+      "fn": "on.input.canvas = function() {\n  output({\n    context: data.getContext('2d')\n  });\n};\n"
     },
     {
       "ports": {
