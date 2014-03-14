@@ -14,11 +14,6 @@
         "async": true,
         "type": "HTMLElement",
         "required": "true"
-      },
-      "type": {
-        "title": "Type",
-        "enum": ["2d","3d"],
-        "default": "2d"
       }
     },
     "output": {
