@@ -1,0 +1,25 @@
+{
+  "name": "restore",
+  "ns": "canvas",
+  "async": true,
+  "title": "Rotate",
+  "description": "Restore Context",
+  "phrases": {
+    "active": "Restoring"
+  },
+  "ports": {
+    "input": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D",
+        "required": "true"
+      }
+    },
+    "output": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D"
+      }
+    }
+  }
+}

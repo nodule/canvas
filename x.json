@@ -565,6 +565,32 @@
             "title": "Context",
             "type": "CanvasRenderingContext2D",
             "required": "true"
+          }
+        },
+        "output": {
+          "context": {
+            "title": "Context",
+            "type": "CanvasRenderingContext2D"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Restoring"
+      },
+      "description": "Restore Context",
+      "title": "Rotate",
+      "async": true,
+      "ns": "canvas",
+      "name": "restore",
+      "fn": "on.input.context = function() {\n  data.restore();\n  output({\n    context: data\n  });\n};\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "context": {
+            "title": "Context",
+            "type": "CanvasRenderingContext2D",
+            "required": "true"
           },
           "angle": {
             "title": "Angle",
