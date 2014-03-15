@@ -226,7 +226,7 @@
             "title": "Dimensions",
             "async": true,
             "type": "object",
-            "items": {
+            "properties": {
               "dx": {
                 "type": "number",
                 "description": "The X coordinate in the destination canvas at which to place the top-left corner of the source image."
