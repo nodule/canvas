@@ -907,7 +907,7 @@
           "in": {
             "title": "Point",
             "async": true,
-            "type": "array",
+            "type": "object",
             "required": "true",
             "properties": {
               "x": {
