@@ -281,7 +281,7 @@
       "async": true,
       "ns": "canvas",
       "name": "drawImage",
-      "fn": "on.input.in = function() {\n\n  var args = [input.image];\n\n  if(data.sx && data.sy && data.sw && data.sh) {\n    args.push(data.sx);\n    args.push(data.sy);\n    args.push(data.sw);\n    args.push(data.sh);\n  }\n\n  args.push(data.dx || 0);\n  args.push(data.dy || 0);\n\n  if(data.dw) {\n    args.push(data.dw);\n    if(data.dh) {\n      args.push(data.dh);\n    }\n  }\n\n  output({\n    out: input.context.drawImage.apply(input.context, args),\n    context: input.context\n  });\n\n};\n"
+      "fn": "on.input.in = function() {\n\n  var args = [input.element];\n\n  if(data.sx && data.sy && data.sw && data.sh) {\n    args.push(data.sx);\n    args.push(data.sy);\n    args.push(data.sw);\n    args.push(data.sh);\n  }\n\n  args.push(data.dx || 0);\n  args.push(data.dy || 0);\n\n  if(data.dw) {\n    args.push(data.dw);\n    if(data.dh) {\n      args.push(data.dh);\n    }\n  }\n\n  output({\n    out: input.context.drawImage.apply(input.context, args),\n    context: input.context\n  });\n\n};\n"
     },
     {
       "ports": {

@@ -1,6 +1,6 @@
 on.input.in = function() {
 
-  var args = [input.image];
+  var args = [input.element];
 
   if(data.sx && data.sy && data.sw && data.sh) {
     args.push(data.sx);
