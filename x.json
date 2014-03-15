@@ -131,19 +131,17 @@
           "in": {
             "title": "Dimensions",
             "async": true,
-            "type": "array",
-            "items": [
-              {
+            "type": "object",
+            "items": {
+              "width": {
                 "type": "number",
                 "title": "Width"
               },
-              {
+              "height": {
                 "type": "number",
                 "title": "Height"
               }
-            ],
-            "minItems": 2,
-            "maxItems": 2
+            }
           }
         },
         "output": {
@@ -165,7 +163,7 @@
       "async": true,
       "ns": "canvas",
       "name": "createImageData",
-      "fn": "on.input.in = function() {\n  input.context.createImageData(data[0], data[1]);\n  output({\n    context: input.context,\n    out: data\n  });\n};\n"
+      "fn": "on.input.in = function() {\n  input.context.createImageData(input.width, input.height);\n  output({\n    context: input.context,\n    out: data\n  });\n};\n"
     },
     {
       "ports": {

@@ -21,13 +21,11 @@
       "in": {
         "title": "Dimensions",
         "async": true,
-        "type": "array",
-        "items": [
-          { "type": "number", "title": "Width" },
-          { "type": "number", "title": "Height" }
-        ],
-        "minItems": 2,
-        "maxItems": 2
+        "type": "object",
+        "items": {
+          "width": { "type": "number", "title": "Width" },
+          "height": { "type": "number", "title": "Height" }
+        }
       }
     },
     "output": {

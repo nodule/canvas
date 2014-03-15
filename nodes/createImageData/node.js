@@ -1,5 +1,5 @@
 on.input.in = function() {
-  input.context.createImageData(data[0], data[1]);
+  input.context.createImageData(input.width, input.height);
   output({
     context: input.context,
     out: data
