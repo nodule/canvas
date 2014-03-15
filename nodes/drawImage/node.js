@@ -9,13 +9,13 @@ on.input.in = function() {
     args.push(data.sh);
   }
 
-  data.push(data.dx || 0);
-  data.push(data.dy || 0);
+  args.push(data.dx || 0);
+  args.push(data.dy || 0);
 
   if(data.dw) {
-    data.push(data.dw);
+    args.push(data.dw);
     if(data.dh) {
-      data.push(data.dh);
+      args.push(data.dh);
     }
   }
 
