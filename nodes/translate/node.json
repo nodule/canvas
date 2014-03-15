@@ -19,12 +19,10 @@
         "async": true,
         "type": "array",
         "required": "true",
-        "items": [
-          { "type": "number", "title": "X" },
-          { "type": "number", "title": "Y" }
-        ],
-        "minItems": 2,
-        "maxItems": 2
+        "properties": {
+          "x": { "type": "number", "title": "X" },
+          "y": { "type": "number", "title": "Y" }
+        }
       }
     },
     "output": {

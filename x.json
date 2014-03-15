@@ -909,18 +909,16 @@
             "async": true,
             "type": "array",
             "required": "true",
-            "items": [
-              {
+            "properties": {
+              "x": {
                 "type": "number",
                 "title": "X"
               },
-              {
+              "y": {
                 "type": "number",
                 "title": "Y"
               }
-            ],
-            "minItems": 2,
-            "maxItems": 2
+            }
           }
         },
         "output": {
@@ -942,7 +940,7 @@
       "async": true,
       "ns": "canvas",
       "name": "translate",
-      "fn": "on.input.in = function() {\n  input.context.translate(data[0], data[1]);\n  output({\n    context: input.context,\n    out: data\n  });\n};\n"
+      "fn": "on.input.in = function() {\n  input.context.translate(data.x, data.y);\n  output({\n    context: input.context,\n    out: data\n  });\n};\n"
     }
   ],
   "twigs": []
