@@ -19,8 +19,8 @@ on.input.in = function() {
     }
   }
 
+  input.context.drawImage.apply(input.context, args);
   output({
-    out: input.context.drawImage.apply(input.context, args),
     context: input.context
   });
 
