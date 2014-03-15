@@ -899,6 +899,50 @@
     {
       "ports": {
         "input": {
+          "text": {
+            "title": "Text",
+            "type": "text",
+            "required": "true"
+          },
+          "x": {
+            "title": "X",
+            "type": "numeric",
+            "required": "true",
+            "default": 0
+          },
+          "y": {
+            "title": "Y",
+            "type": "numeric",
+            "required": "true",
+            "default": 0
+          },
+          "context": {
+            "title": "Context",
+            "async": true,
+            "type": "CanvasRenderingContext2D",
+            "required": "true"
+          }
+        },
+        "output": {
+          "context": {
+            "title": "Context",
+            "type": "CanvasRenderingContext2D"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Stroking text"
+      },
+      "description": "Stroke Text",
+      "title": "Stroke Text",
+      "async": true,
+      "ns": "canvas",
+      "name": "strokeText",
+      "fn": "on.input.context = function() {\n  data.strokeText(input.text, input.x, input.y);\n  output({ context: data });\n};\n"
+    },
+    {
+      "ports": {
+        "input": {
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",

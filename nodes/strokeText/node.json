@@ -1,0 +1,43 @@
+{
+  "name": "strokeText",
+  "ns": "canvas",
+  "async": true,
+  "title": "Stroke Text",
+  "description": "Stroke Text",
+  "phrases": {
+    "active": "Stroking text"
+  },
+  "ports": {
+    "input": {
+      "text": {
+        "title": "Text",
+        "type": "text",
+        "required": "true"
+      },
+      "x": {
+        "title": "X",
+        "type": "numeric",
+        "required": "true",
+        "default": 0
+      },
+      "y": {
+        "title": "Y",
+        "type": "numeric",
+        "required": "true",
+        "default": 0
+      },
+      "context": {
+        "title": "Context",
+        "async": true,
+        "type": "CanvasRenderingContext2D",
+        "required": "true"
+      }
+    },
+    "output": {
+      "context": {
+        "title": "Context",
+        "type": "CanvasRenderingContext2D"
+      }
+    }
+  }
+}
