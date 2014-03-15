@@ -690,7 +690,7 @@
             "type": "object",
             "async": true,
             "required": "true",
-            "items": {
+            "properties": {
               "fillStyle": {
                 "type": "string",
                 "title": "Fill Style",
