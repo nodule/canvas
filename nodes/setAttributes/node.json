@@ -32,7 +32,7 @@
             "default": "10px sans-serif"
           },
           "globalAlpha": {
-            "type": "string",
+            "type": "number",
             "title": "Global Alpha",
             "description": "globalAlpha float Alpha value that is applied to shapes and images before they are composited onto the canvas. Default 1.0 (opaque).",
             "default": 1
@@ -63,7 +63,7 @@
             "default": "butt"
           },
           "lineDashOffset": {
-            "type": "float",
+            "type": "number",
             "title": "Line Dash Offset",
             "description": "Specifies where to start a dasharray on a line."
           },
