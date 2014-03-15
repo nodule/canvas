@@ -2,7 +2,7 @@ on.input.in = function() {
 
   var args = [input.image];
 
-  if(data.sx && data.sy && data.sw &&  data.sh) {
+  if(data.sx && data.sy && data.sw && data.sh) {
     args.push(data.sx);
     args.push(data.sy);
     args.push(data.sw);
@@ -19,23 +19,9 @@ on.input.in = function() {
     }
   }
 
-  var res, error = null;
-  try {
-    res = input.context.drawImage.apply(input.context, args);
-  } catch(e) {
-    error = e;
-  }
-
-  if(error) {
-    output({
-      error: error,
-      context: input.context,
-    });
-  } else {
-    output({
-      out: input.context.drawImage.apply(input.context, args),
-      context: input.context,
-    });
-  }
+  output({
+    out: input.context.drawImage.apply(input.context, args),
+    context: input.context
+  });
 
 };
