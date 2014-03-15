@@ -21,7 +21,7 @@ on.input.in = function() {
 
   var res, error = null;
   try {
-    res = input.context.drawImage.apply(null, args);
+    res = input.context.drawImage.apply(input.context, args);
   } catch(e) {
     error = e;
   }
@@ -33,7 +33,7 @@ on.input.in = function() {
     });
   } else {
     output({
-      out: input.context.drawImage.apply(null, args),
+      out: input.context.drawImage.apply(input.context, args),
       context: input.context,
     });
   }
