@@ -285,7 +285,7 @@
       "async": true,
       "ns": "canvas",
       "name": "drawImage",
-      "fn": "on.input.in = function() {\n\n  var args = [input.image];\n\n  if(data.sx && data.sy && data.sw &&  data.sh) {\n    args.push(data.sx);\n    args.push(data.sy);\n    args.push(data.sw);\n    args.push(data.sh);\n  }\n\n  data.push(data.dx || 0);\n  data.push(data.dy || 0);\n\n  if(data.dw) {\n    data.push(data.dw);\n    if(data.dh) {\n      data.push(data.dh);\n    }\n  }\n\n  var res, error = null;\n  try {\n    res = input.context.drawImage.apply(null, args),\n  } catch(e) {\n    error = e;\n  }\n\n  if(error) {\n    output({\n      error: error,\n      context: input.context,\n    });\n  } else {\n    output({\n      out: input.context.drawImage.apply(null, args),\n      context: input.context,\n    });\n  }\n\n};\n"
+      "fn": "on.input.in = function() {\n\n  var args = [input.image];\n\n  if(data.sx && data.sy && data.sw &&  data.sh) {\n    args.push(data.sx);\n    args.push(data.sy);\n    args.push(data.sw);\n    args.push(data.sh);\n  }\n\n  data.push(data.dx || 0);\n  data.push(data.dy || 0);\n\n  if(data.dw) {\n    data.push(data.dw);\n    if(data.dh) {\n      data.push(data.dh);\n    }\n  }\n\n  var res, error = null;\n  try {\n    res = input.context.drawImage.apply(null, args);\n  } catch(e) {\n    error = e;\n  }\n\n  if(error) {\n    output({\n      error: error,\n      context: input.context,\n    });\n  } else {\n    output({\n      out: input.context.drawImage.apply(null, args),\n      context: input.context,\n    });\n  }\n\n};\n"
     },
     {
       "ports": {

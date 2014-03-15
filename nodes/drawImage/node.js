@@ -21,7 +21,7 @@ on.input.in = function() {
 
   var res, error = null;
   try {
-    res = input.context.drawImage.apply(null, args),
+    res = input.context.drawImage.apply(null, args);
   } catch(e) {
     error = e;
   }
