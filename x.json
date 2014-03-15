@@ -901,7 +901,7 @@
         "input": {
           "text": {
             "title": "Text",
-            "type": "text",
+            "type": "string",
             "required": "true"
           },
           "x": {
