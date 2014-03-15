@@ -906,13 +906,13 @@
           },
           "x": {
             "title": "X",
-            "type": "numeric",
+            "type": "number",
             "required": "true",
             "default": 0
           },
           "y": {
             "title": "Y",
-            "type": "numeric",
+            "type": "number",
             "required": "true",
             "default": 0
           },
