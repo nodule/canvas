@@ -818,7 +818,7 @@
                 "default": 0
               },
               "shadowColor": {
-                "type": "number",
+                "type": "string",
                 "title": "Shadow Color",
                 "description": "Color of the shadow. Default fully-transparent black.",
                 "format": "color",
@@ -837,7 +837,7 @@
                 "default": 0
               },
               "strokeStyle": {
-                "type": "number",
+                "type": "string",
                 "title": "Stroke style",
                 "description": "Color or style to use for the lines around shapes.",
                 "format": "color",
