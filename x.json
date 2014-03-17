@@ -43,6 +43,53 @@
             "async": true,
             "type": "CanvasRenderingContext2D",
             "required": "true"
+          },
+          "x": {
+            "title": "X",
+            "type": "number",
+            "description": "The x axis of the coordinate for the rectangle starting point."
+          },
+          "y": {
+            "title": "Y",
+            "type": "number",
+            "description": "The y axis of the coordinate for the rectangle starting point."
+          },
+          "width": {
+            "title": "Width",
+            "type": "number",
+            "description": "The rectangle's width."
+          },
+          "height": {
+            "title": "Height",
+            "type": "number",
+            "description": "The rectangle's height."
+          }
+        },
+        "output": {
+          "context": {
+            "title": "Context",
+            "type": "CanvasRenderingContext2D"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Clearing rectangle"
+      },
+      "description": "Sets all pixels in the rectangle defined by starting point (x, y) and size (width, height) to transparent black.",
+      "title": "Clear Rectangle",
+      "async": true,
+      "ns": "canvas",
+      "name": "clearRect",
+      "fn": "on.input.context = function() {\n  data.clearRect({\n    x: input.x,\n    y: input.y,\n    width: input.width,\n    height: input.height\n  });\n  output({ context: data });\n};\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "context": {
+            "title": "Context",
+            "async": true,
+            "type": "CanvasRenderingContext2D",
+            "required": "true"
           }
         },
         "output": {
