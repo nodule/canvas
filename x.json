@@ -709,7 +709,7 @@
                 "default": 1
               },
               "globalCompositeOperation": {
-                "title": "Global Alpha",
+                "title": "Global Composite Operation",
                 "description": "With globalAlpha applied this sets how shapes and images are drawn onto the existing bitmap.",
                 "enum": [
                   "source-atop",
