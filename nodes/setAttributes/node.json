@@ -24,6 +24,7 @@
             "type": "string",
             "title": "Fill Style",
             "description": "Color or style to use inside shapes. Default #000 (black).",
+            "format": "color",
             "default": "#000"
           },
           "font": {
@@ -94,6 +95,7 @@
             "type": "number",
             "title": "Shadow Color",
             "description": "Color of the shadow. Default fully-transparent black.",
+            "format": "color",
             "default":  0
           },
           "shadowOffsetX": {
@@ -112,6 +114,7 @@
             "type": "number",
             "title": "Stroke style",
             "description": "Color or style to use for the lines around shapes.",
+            "format": "color",
             "default": "#000"
           },
           "textAlign": {
