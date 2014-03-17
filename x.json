@@ -80,7 +80,7 @@
       "async": true,
       "ns": "canvas",
       "name": "clearRect",
-      "fn": "on.input.context = function() {\n  data.clearRect({\n    x: input.x,\n    y: input.y,\n    width: input.width,\n    height: input.height\n  });\n  output({ context: data });\n};\n"
+      "fn": "on.input.context = function() {\n  data.clearRect(input.x, input.y, input.width, input.height);\n  output({ context: data });\n};\n"
     },
     {
       "ports": {
