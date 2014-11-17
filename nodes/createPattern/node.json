@@ -21,7 +21,12 @@
       },
       "repetition": {
         "title": "Repetition",
-        "enum": ["repeat","repeat-x","repeat-y","no-repeat"]
+        "enum": [
+          "repeat",
+          "repeat-x",
+          "repeat-y",
+          "no-repeat"
+        ]
       }
     },
     "output": {

@@ -58,7 +58,11 @@
             "default": "source-over"
           },
           "lineCap": {
-            "enum": ["butt","round","square"],
+            "enum": [
+              "butt",
+              "round",
+              "square"
+            ],
             "title": "Line Cap",
             "description": "Type of endings on the end of lines.",
             "default": "butt"
@@ -69,10 +73,14 @@
             "description": "Specifies where to start a dasharray on a line."
           },
           "lineJoin": {
-            "enum": ["miter","round","bevel"],
+            "enum": [
+              "miter",
+              "round",
+              "bevel"
+            ],
             "title": "Line Join",
             "description": "Defines the type of corners where two lines meet.",
-            "default":"miter"
+            "default": "miter"
           },
           "lineWidth": {
             "type": "number",
@@ -89,26 +97,26 @@
             "type": "number",
             "title": "Shadow Blur",
             "description": "float Specifies the blurring effect.",
-            "default":  0
+            "default": 0
           },
           "shadowColor": {
             "type": "string",
             "title": "Shadow Color",
             "description": "Color of the shadow. Default fully-transparent black.",
             "format": "color",
-            "default":  0
+            "default": 0
           },
           "shadowOffsetX": {
             "type": "number",
             "title": "Shadow Offset X",
             "description": "Horizontal distance the shadow will be offset.",
-            "default":  0
+            "default": 0
           },
           "shadowOffsetY": {
             "type": "number",
             "title": "Shadow Offset Y",
             "description": "Vertical distance the shadow will be offset.",
-            "default":  0
+            "default": 0
           },
           "strokeStyle": {
             "type": "string",
@@ -118,16 +126,28 @@
             "default": "#000"
           },
           "textAlign": {
-            "enum": ["start","end","left","right","center"],
+            "enum": [
+              "start",
+              "end",
+              "left",
+              "right",
+              "center"
+            ],
             "title": "Text Align",
             "default": "start"
           },
           "textBaseline": {
-            "enum": ["top","hanging","middle","alphabetic","ideographic","bottom"],
+            "enum": [
+              "top",
+              "hanging",
+              "middle",
+              "alphabetic",
+              "ideographic",
+              "bottom"
+            ],
             "title": "Text Baseline",
             "default": "alphabetic"
           }
-
         }
       }
     },

@@ -23,8 +23,14 @@
         "async": true,
         "type": "object",
         "items": {
-          "width": { "type": "number", "title": "Width" },
-          "height": { "type": "number", "title": "Height" }
+          "width": {
+            "type": "number",
+            "title": "Width"
+          },
+          "height": {
+            "type": "number",
+            "title": "Height"
+          }
         }
       }
     },

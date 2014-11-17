@@ -20,8 +20,14 @@
         "type": "object",
         "required": "true",
         "properties": {
-          "x": { "type": "number", "title": "X" },
-          "y": { "type": "number", "title": "Y" }
+          "x": {
+            "type": "number",
+            "title": "X"
+          },
+          "y": {
+            "type": "number",
+            "title": "Y"
+          }
         }
       }
     },
