@@ -1,4 +1,4 @@
 on.input.context = function() {
-  data.resetClip();
-  output({ context: data });
+  input.context.resetClip();
+  output({ context: input.context });
 };

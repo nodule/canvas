@@ -1,4 +1,4 @@
 on.input.context = function() {
-  data.clip();
-  output({ context: data });
+  input.context.clip();
+  output({ context: input.context });
 };

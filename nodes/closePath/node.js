@@ -1,4 +1,4 @@
 on.input.context = function() {
-  data.closePath();
-  output({ context: data });
+  input.context.closePath();
+  output({ context: input.context });
 };

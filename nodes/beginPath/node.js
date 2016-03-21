@@ -1,4 +1,4 @@
 on.input.context = function() {
-  data.beginPath();
-  output({ context: data });
+  input.context.beginPath();
+  output({ context: input.context });
 };

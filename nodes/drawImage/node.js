@@ -2,20 +2,20 @@ on.input.in = function() {
 
   var args = [input.element];
 
-  if(data.sx && data.sy && data.sw && data.sh) {
-    args.push(data.sx);
-    args.push(data.sy);
-    args.push(data.sw);
-    args.push(data.sh);
+  if(input.in.sx && input.in.sy && input.in.sw && input.in.sh) {
+    args.push(input.in.sx);
+    args.push(input.in.sy);
+    args.push(input.in.sw);
+    args.push(input.in.sh);
   }
 
-  args.push(data.dx || 0);
-  args.push(data.dy || 0);
+  args.push(input.in.dx || 0);
+  args.push(input.in.dy || 0);
 
-  if(data.dw) {
-    args.push(data.dw);
-    if(data.dh) {
-      args.push(data.dh);
+  if(input.in.dw) {
+    args.push(input.in.dw);
+    if(input.in.dh) {
+      args.push(input.in.dh);
     }
   }
 

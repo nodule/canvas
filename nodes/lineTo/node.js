@@ -1,7 +1,7 @@
 on.input.in = function() {
-  input.context.lineTo(data.x, data.y);
+  input.context.lineTo(input.in.x, input.in.y);
   output({
     context: input.context,
-    out: data
+    out: input.in
   });
 };

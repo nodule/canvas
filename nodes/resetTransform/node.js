@@ -1,4 +1,4 @@
 on.input.context = function() {
-  data.resetTransform();
-  output({ context: data });
+  input.context.resetTransform();
+  output({ context: input.context });
 };

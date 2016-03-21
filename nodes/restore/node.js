@@ -1,6 +1,6 @@
 on.input.context = function() {
-  data.restore();
+  input.context.restore();
   output({
-    context: data
+    context: input.context
   });
 };

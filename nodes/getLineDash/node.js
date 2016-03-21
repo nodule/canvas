@@ -1,6 +1,6 @@
 on.input.context = function() {
   output({
-    out: data.getLineDash(),
-    context: data
+    out: input.context.getLineDash(),
+    context: input.context
   });
 };

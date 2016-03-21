@@ -1,4 +1,4 @@
 on.input.context = function() {
-  data.commit();
-  output({ context: data });
+  input.context.commit();
+  output({ context: input.context });
 };

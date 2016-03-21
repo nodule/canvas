@@ -1,5 +1,5 @@
 on.input.angle = function() {
-  input.context.rotate(data);
+  input.context.rotate(input.angle);
   output({
     context: input.context
   });
