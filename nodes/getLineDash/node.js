@@ -1,6 +1,6 @@
 on.input.context = function() {
   output({
-    out: $.context.getLineDash(),
-    context: $.context
+    out: $.create($.context.getLineDash()),
+    context: $.get('context')
   });
 };

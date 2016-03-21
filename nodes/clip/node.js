@@ -1,4 +1,4 @@
 on.input.context = function() {
   $.context.clip();
-  output({ context: $.context });
+  output({ context: $.get('context') });
 };

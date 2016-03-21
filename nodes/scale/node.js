@@ -1,4 +1,4 @@
 on.input.in = function() {
   $.context.scale($.in[0], $.in[1]);
-  output({ context: $.context });
+  output({ context: $.get('context') });
 };

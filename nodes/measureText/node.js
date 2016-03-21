@@ -1,6 +1,6 @@
 on.input.text= function() {
   output({
-    metrics: $.context.measureText($.text),
-    context: $.context
+    metrics: $.create($.context.measureText($.text)),
+    context: $.get('context')
   });
 };

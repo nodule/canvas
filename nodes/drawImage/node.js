@@ -1,5 +1,4 @@
 on.input.in = function() {
-
   var args = [$.element];
 
   if($.in.sx && $.in.sy && $.in.sw && $.in.sh) {
@@ -21,7 +20,7 @@ on.input.in = function() {
 
   $.context.drawImage.apply($.context, args);
   output({
-    context: $.context
+    context: $.get('context')
   });
 
 };

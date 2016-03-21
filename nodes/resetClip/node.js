@@ -1,4 +1,4 @@
 on.input.context = function() {
   $.context.resetClip();
-  output({ context: $.context });
+  output({ context: $.get('context') });
 };

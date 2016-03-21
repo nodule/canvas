@@ -1,4 +1,4 @@
 on.input.context = function() {
   $.context.strokeText($.text, $.x, $.y);
-  output({ context: $.context });
+  output({ context: $.get('context') });
 };

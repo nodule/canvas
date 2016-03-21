@@ -1,6 +1,6 @@
 on.input.context = function() {
   $.context.restore();
   output({
-    context: $.context
+    context: $.get('context')
   });
 };

@@ -3,6 +3,6 @@ on.input.in = function() {
     $.context[k] = $.in[k];
   }
   output({
-    context: $.context
+    context: $.get('context')
   });
 };
