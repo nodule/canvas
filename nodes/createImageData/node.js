@@ -1,7 +1,7 @@
 on.input.in = function() {
-  input.context.createImageData(input.width, input.height);
+  $.context.createImageData($.width, $.height);
   output({
-    context: input.context,
-    out: input.in
+    context: $.context,
+    out: $.in
   });
 };

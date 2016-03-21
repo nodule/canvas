@@ -1,27 +1,27 @@
 on.input.in = function() {
 
-  var args = [input.element];
+  var args = [$.element];
 
-  if(input.in.sx && input.in.sy && input.in.sw && input.in.sh) {
-    args.push(input.in.sx);
-    args.push(input.in.sy);
-    args.push(input.in.sw);
-    args.push(input.in.sh);
+  if($.in.sx && $.in.sy && $.in.sw && $.in.sh) {
+    args.push($.in.sx);
+    args.push($.in.sy);
+    args.push($.in.sw);
+    args.push($.in.sh);
   }
 
-  args.push(input.in.dx || 0);
-  args.push(input.in.dy || 0);
+  args.push($.in.dx || 0);
+  args.push($.in.dy || 0);
 
-  if(input.in.dw) {
-    args.push(input.in.dw);
-    if(input.in.dh) {
-      args.push(input.in.dh);
+  if($.in.dw) {
+    args.push($.in.dw);
+    if($.in.dh) {
+      args.push($.in.dh);
     }
   }
 
-  input.context.drawImage.apply(input.context, args);
+  $.context.drawImage.apply($.context, args);
   output({
-    context: input.context
+    context: $.context
   });
 
 };

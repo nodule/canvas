@@ -1,6 +1,6 @@
 on.input.element = function() {
   output({
-    out: input.context.createImageData(input.element, input.repetition),
-    context: input.context
+    out: $.context.createImageData($.element, $.repetition),
+    context: $.context
   });
 };

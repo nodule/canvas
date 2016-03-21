@@ -1,8 +1,8 @@
 on.input.in = function() {
-  for(var k in input.in) {
-    input.context[k] = input.in[k];
+  for(var k in $.in) {
+    $.context[k] = $.in[k];
   }
   output({
-    context: input.context
+    context: $.context
   });
 };

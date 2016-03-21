@@ -1,6 +1,6 @@
 on.input.angle = function() {
-  input.context.rotate(input.angle);
+  $.context.rotate($.angle);
   output({
-    context: input.context
+    context: $.context
   });
 };

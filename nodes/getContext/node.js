@@ -1,5 +1,5 @@
 on.input.canvas = function() {
   output({
-    context: input.canvas.getContext('2d')
+    context: $.canvas.getContext('2d')
   });
 };

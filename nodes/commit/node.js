@@ -1,4 +1,4 @@
 on.input.context = function() {
-  input.context.commit();
-  output({ context: input.context });
+  $.context.commit();
+  output({ context: $.context });
 };

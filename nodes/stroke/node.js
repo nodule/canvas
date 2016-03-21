@@ -1,4 +1,4 @@
 on.input.context = function() {
-  input.context.stroke();
-  output({ context: input.context });
+  $.context.stroke();
+  output({ context: $.context });
 };

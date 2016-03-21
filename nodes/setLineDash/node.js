@@ -1,6 +1,6 @@
 on.input.segment = function() {
-  input.context.setLineDash(input.segment);
+  $.context.setLineDash($.segment);
   output({
-    context: input.context
+    context: $.context
   });
 };

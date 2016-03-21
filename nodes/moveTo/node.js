@@ -1,7 +1,7 @@
 on.input.in = function() {
-  input.context.moveTo(input.in.x, input.in.y);
+  $.context.moveTo($.in.x, $.in.y);
   output({
-    context: input.context,
-    out: input.in
+    context: $.context,
+    out: $.in
   });
 };

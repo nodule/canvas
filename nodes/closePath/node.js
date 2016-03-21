@@ -1,4 +1,4 @@
 on.input.context = function() {
-  input.context.closePath();
-  output({ context: input.context });
+  $.context.closePath();
+  output({ context: $.context });
 };

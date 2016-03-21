@@ -1,4 +1,4 @@
 on.input.context = function() {
-  input.context.save();
-  output({ context: input.context });
+  $.context.save();
+  output({ context: $.context });
 };
