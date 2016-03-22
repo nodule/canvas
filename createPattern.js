@@ -21,8 +21,8 @@ module.exports = {
         fn: function __ELEMENT__(data, x, source, state, input, output) {
           var r = function() {
             output({
-              out: input.context.createImageData(data, input.repetition),
-              context: input.context
+              out: $.create($.context.createImageData($.element, $.repetition)),
+              context: $.get('context')
             });
           }.call(this);
           return {

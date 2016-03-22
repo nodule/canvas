@@ -33,7 +33,7 @@
       "async": true,
       "ns": "canvas",
       "name": "beginPath",
-      "fn": "on.input.context = function() {\n  data.beginPath();\n  output({ context: data });\n};\n"
+      "fn": "on.input.context = function() {\n  $.context.beginPath();\n  output({ context: $.get('context') });\n};\n"
     },
     {
       "ports": {
@@ -80,7 +80,7 @@
       "async": true,
       "ns": "canvas",
       "name": "clearRect",
-      "fn": "on.input.context = function() {\n  data.clearRect(input.x, input.y, input.width, input.height);\n  output({ context: data });\n};\n"
+      "fn": "on.input.context = function() {\n  $.context.clearRect($.x, $.y, $.width, $.height);\n  output({ context: $.get('context') });\n};\n"
     },
     {
       "ports": {
@@ -107,7 +107,7 @@
       "async": true,
       "ns": "canvas",
       "name": "clip",
-      "fn": "on.input.context = function() {\n  data.clip();\n  output({ context: data });\n};\n"
+      "fn": "on.input.context = function() {\n  $.context.clip();\n  output({ context: $.get('context') });\n};\n"
     },
     {
       "ports": {
@@ -134,7 +134,7 @@
       "async": true,
       "ns": "canvas",
       "name": "closePath",
-      "fn": "on.input.context = function() {\n  data.closePath();\n  output({ context: data });\n};\n"
+      "fn": "on.input.context = function() {\n  $.context.closePath();\n  output({ context: $.get('context') });\n};\n"
     },
     {
       "ports": {
@@ -161,7 +161,7 @@
       "async": true,
       "ns": "canvas",
       "name": "commit",
-      "fn": "on.input.context = function() {\n  data.commit();\n  output({ context: data });\n};\n"
+      "fn": "on.input.context = function() {\n  $.context.commit();\n  output({ context: $.get('context') });\n};\n"
     },
     {
       "ports": {
@@ -210,7 +210,7 @@
       "async": true,
       "ns": "canvas",
       "name": "createImageData",
-      "fn": "on.input.in = function() {\n  input.context.createImageData(input.width, input.height);\n  output({\n    context: input.context,\n    out: data\n  });\n};\n"
+      "fn": "on.input.in = function() {\n  $.context.createImageData($.width, $.height);\n  output({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
     },
     {
       "ports": {
@@ -254,7 +254,7 @@
       "async": true,
       "ns": "canvas",
       "name": "createPattern",
-      "fn": "on.input.element = function() {\n  output({\n    out: input.context.createImageData(data, input.repetition),\n    context: input.context\n  });\n};\n"
+      "fn": "on.input.element = function() {\n  output({\n    out: $.create($.context.createImageData($.element, $.repetition)),\n    context: $.get('context') \n  });\n};\n"
     },
     {
       "ports": {
@@ -338,7 +338,7 @@
       "async": true,
       "ns": "canvas",
       "name": "drawImage",
-      "fn": "on.input.in = function() {\n\n  var args = [input.element];\n\n  if(data.sx && data.sy && data.sw && data.sh) {\n    args.push(data.sx);\n    args.push(data.sy);\n    args.push(data.sw);\n    args.push(data.sh);\n  }\n\n  args.push(data.dx || 0);\n  args.push(data.dy || 0);\n\n  if(data.dw) {\n    args.push(data.dw);\n    if(data.dh) {\n      args.push(data.dh);\n    }\n  }\n\n  input.context.drawImage.apply(input.context, args);\n  output({\n    context: input.context\n  });\n\n};\n"
+      "fn": "on.input.in = function() {\n  var args = [$.element];\n\n  if($.in.sx && $.in.sy && $.in.sw && $.in.sh) {\n    args.push($.in.sx);\n    args.push($.in.sy);\n    args.push($.in.sw);\n    args.push($.in.sh);\n  }\n\n  args.push($.in.dx || 0);\n  args.push($.in.dy || 0);\n\n  if($.in.dw) {\n    args.push($.in.dw);\n    if($.in.dh) {\n      args.push($.in.dh);\n    }\n  }\n\n  $.context.drawImage.apply($.context, args);\n  output({\n    context: $.get('context')\n  });\n\n};\n"
     },
     {
       "ports": {
@@ -365,7 +365,7 @@
       "async": true,
       "ns": "canvas",
       "name": "fill",
-      "fn": "on.input.context = function() {\n  data.fill();\n  output({ context: data });\n};\n"
+      "fn": "on.input.context = function() {\n  $.context.fill();\n  output({ context: $.get('context') });\n};\n"
     },
     {
       "ports": {
@@ -392,7 +392,7 @@
       "async": true,
       "ns": "canvas",
       "name": "getContext",
-      "fn": "on.input.canvas = function() {\n  output({\n    context: data.getContext('2d')\n  });\n};\n"
+      "fn": "on.input.canvas = function() {\n  output({\n    context: $.create($.canvas.getContext('2d'))\n  });\n};\n"
     },
     {
       "ports": {
@@ -423,7 +423,7 @@
       "async": true,
       "ns": "canvas",
       "name": "getLineDash",
-      "fn": "on.input.context = function() {\n  output({\n    out: data.getLineDash(),\n    context: data\n  });\n};\n"
+      "fn": "on.input.context = function() {\n  output({\n    out: $.create($.context.getLineDash()),\n    context: $.get('context')\n  });\n};\n"
     },
     {
       "ports": {
@@ -471,7 +471,7 @@
       "async": true,
       "ns": "canvas",
       "name": "lineTo",
-      "fn": "on.input.in = function() {\n  input.context.lineTo(data.x, data.y);\n  output({\n    context: input.context,\n    out: data\n  });\n};\n"
+      "fn": "on.input.in = function() {\n  $.context.lineTo($.in.x, $.in.y);\n  output({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
     },
     {
       "ports": {
@@ -507,7 +507,7 @@
       "async": true,
       "ns": "canvas",
       "name": "measureText",
-      "fn": "on.input.text= function() {\n  output({\n    metrics: input.context.measureText(data),\n    context: input.context\n  });\n};\n"
+      "fn": "on.input.text= function() {\n  output({\n    metrics: $.create($.context.measureText($.text)),\n    context: $.get('context')\n  });\n};\n"
     },
     {
       "ports": {
@@ -553,7 +553,7 @@
       "async": true,
       "ns": "canvas",
       "name": "moveTo",
-      "fn": "on.input.in = function() {\n  input.context.moveTo(data.x, data.y);\n  output({\n    context: input.context,\n    out: data\n  });\n};\n"
+      "fn": "on.input.in = function() {\n  $.context.moveTo($.in.x, $.in.y);\n  output({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
     },
     {
       "ports": {
@@ -580,7 +580,7 @@
       "async": true,
       "ns": "canvas",
       "name": "resetClip",
-      "fn": "on.input.context = function() {\n  data.resetClip();\n  output({ context: data });\n};\n"
+      "fn": "on.input.context = function() {\n  $.context.resetClip();\n  output({ context: $.get('context') });\n};\n"
     },
     {
       "ports": {
@@ -607,7 +607,7 @@
       "async": true,
       "ns": "canvas",
       "name": "resetTransform",
-      "fn": "on.input.context = function() {\n  data.resetTransform();\n  output({ context: data });\n};\n"
+      "fn": "on.input.context = function() {\n  $.context.resetTransform();\n  output({ context: $.get('context') });\n};\n"
     },
     {
       "ports": {
@@ -633,7 +633,7 @@
       "async": true,
       "ns": "canvas",
       "name": "restore",
-      "fn": "on.input.context = function() {\n  data.restore();\n  output({\n    context: data\n  });\n};\n"
+      "fn": "on.input.context = function() {\n  $.context.restore();\n  output({\n    context: $.get('context')\n  });\n};\n"
     },
     {
       "ports": {
@@ -665,7 +665,7 @@
       "async": true,
       "ns": "canvas",
       "name": "rotate",
-      "fn": "on.input.angle = function() {\n  input.context.rotate(data);\n  output({\n    context: input.context\n  });\n};\n"
+      "fn": "on.input.angle = function() {\n  $.context.rotate($.angle);\n  output({\n    context: $.get('context')\n  });\n};\n"
     },
     {
       "ports": {
@@ -692,7 +692,7 @@
       "async": true,
       "ns": "canvas",
       "name": "save",
-      "fn": "on.input.context = function() {\n  data.save();\n  output({ context: data });\n};\n"
+      "fn": "on.input.context = function() {\n  $.context.save();\n  output({ context: $.get('context') });\n};\n"
     },
     {
       "ports": {
@@ -736,7 +736,7 @@
       "async": true,
       "ns": "canvas",
       "name": "scale",
-      "fn": "on.input.in = function() {\n  input.context.scale(data[0], data[1]);\n  output({ context: input.context });\n};\n"
+      "fn": "on.input.in = function() {\n  $.context.scale($.in[0], $.in[1]);\n  output({ context: $.get('context') });\n};\n"
     },
     {
       "ports": {
@@ -898,7 +898,7 @@
       "async": true,
       "ns": "canvas",
       "name": "setAttributes",
-      "fn": "on.input.in = function() {\n  for(var k in data) {\n    input.context[k] = data[k];\n  }\n  output({\n    context: input.context\n  });\n};\n"
+      "fn": "on.input.in = function() {\n  for(var k in $.in) {\n    $.context[k] = $.in[k];\n  }\n  output({\n    context: $.get('context')\n  });\n};\n"
     },
     {
       "ports": {
@@ -931,7 +931,7 @@
       "async": true,
       "ns": "canvas",
       "name": "setLineDash",
-      "fn": "on.input.segment = function() {\n  input.context.setLineDash(data);\n  output({\n    context: input.context\n  });\n};\n"
+      "fn": "on.input.segment = function() {\n  $.context.setLineDash($.segment);\n  output({\n    context: $.get('context')\n  });\n};\n"
     },
     {
       "ports": {
@@ -958,7 +958,7 @@
       "async": true,
       "ns": "canvas",
       "name": "stroke",
-      "fn": "on.input.context = function() {\n  data.stroke();\n  output({ context: data });\n};\n"
+      "fn": "on.input.context = function() {\n  $.context.stroke();\n  output({ context: $.get('context') });\n};\n"
     },
     {
       "ports": {
@@ -1002,7 +1002,7 @@
       "async": true,
       "ns": "canvas",
       "name": "strokeText",
-      "fn": "on.input.context = function() {\n  data.strokeText(input.text, input.x, input.y);\n  output({ context: data });\n};\n"
+      "fn": "on.input.context = function() {\n  $.context.strokeText($.text, $.x, $.y);\n  output({ context: $.get('context') });\n};\n"
     },
     {
       "ports": {
@@ -1048,7 +1048,7 @@
       "async": true,
       "ns": "canvas",
       "name": "translate",
-      "fn": "on.input.in = function() {\n  input.context.translate(data.x, data.y);\n  output({\n    context: input.context,\n    out: data\n  });\n};\n"
+      "fn": "on.input.in = function() {\n  $.context.translate($.in.x, $.in.y);\n  output({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
     }
   ],
   "twigs": []

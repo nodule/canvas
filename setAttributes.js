@@ -146,11 +146,11 @@ module.exports = {
         },
         fn: function __IN__(data, x, source, state, input, output) {
           var r = function() {
-            for (var k in data) {
-              input.context[k] = data[k];
+            for (var k in $.in) {
+              $.context[k] = $.in[k];
             }
             output({
-              context: input.context
+              context: $.get('context')
             });
           }.call(this);
           return {

@@ -31,10 +31,10 @@ module.exports = {
         },
         fn: function __IN__(data, x, source, state, input, output) {
           var r = function() {
-            input.context.moveTo(data.x, data.y);
+            $.context.moveTo($.in.x, $.in.y);
             output({
-              context: input.context,
-              out: data
+              context: $.get('context'),
+              out: $.get('in')
             });
           }.call(this);
           return {

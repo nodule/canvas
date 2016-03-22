@@ -15,9 +15,9 @@ module.exports = {
         required: "true",
         fn: function __CONTEXT__(data, x, source, state, input, output) {
           var r = function() {
-            data.restore();
+            $.context.restore();
             output({
-              context: data
+              context: $.get('context')
             });
           }.call(this);
           return {

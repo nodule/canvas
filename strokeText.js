@@ -33,9 +33,9 @@ module.exports = {
         required: "true",
         fn: function __CONTEXT__(data, x, source, state, input, output) {
           var r = function() {
-            data.strokeText(input.text, input.x, input.y);
+            $.context.strokeText($.text, $.x, $.y);
             output({
-              context: data
+              context: $.get('context')
             });
           }.call(this);
           return {

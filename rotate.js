@@ -21,9 +21,9 @@ module.exports = {
         required: "true",
         fn: function __ANGLE__(data, x, source, state, input, output) {
           var r = function() {
-            input.context.rotate(data);
+            $.context.rotate($.angle);
             output({
-              context: input.context
+              context: $.get('context')
             });
           }.call(this);
           return {

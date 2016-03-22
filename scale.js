@@ -30,9 +30,9 @@ module.exports = {
         maxItems: 2,
         fn: function __IN__(data, x, source, state, input, output) {
           var r = function() {
-            input.context.scale(data[0], data[1]);
+            $.context.scale($.in[0], $.in[1]);
             output({
-              context: input.context
+              context: $.get('context')
             });
           }.call(this);
           return {

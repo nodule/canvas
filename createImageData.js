@@ -34,10 +34,10 @@ module.exports = {
         },
         fn: function __IN__(data, x, source, state, input, output) {
           var r = function() {
-            input.context.createImageData(input.width, input.height);
+            $.context.createImageData($.width, $.height);
             output({
-              context: input.context,
-              out: data
+              context: $.get('context'),
+              out: $.get('in')
             });
           }.call(this);
           return {

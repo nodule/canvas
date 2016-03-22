@@ -17,7 +17,7 @@ module.exports = {
         fn: function __CANVAS__(data, x, source, state, input, output) {
           var r = function() {
             output({
-              context: data.getContext('2d')
+              context: $.create($.canvas.getContext('2d'))
             });
           }.call(this);
           return {

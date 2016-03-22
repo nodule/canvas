@@ -73,28 +73,28 @@ module.exports = {
         },
         fn: function __IN__(data, x, source, state, input, output) {
           var r = function() {
-            var args = [input.element];
+            var args = [$.element];
 
-            if (data.sx && data.sy && data.sw && data.sh) {
-              args.push(data.sx);
-              args.push(data.sy);
-              args.push(data.sw);
-              args.push(data.sh);
+            if ($.in.sx && $.in.sy && $.in.sw && $.in.sh) {
+              args.push($.in.sx);
+              args.push($.in.sy);
+              args.push($.in.sw);
+              args.push($.in.sh);
             }
 
-            args.push(data.dx || 0);
-            args.push(data.dy || 0);
+            args.push($.in.dx || 0);
+            args.push($.in.dy || 0);
 
-            if (data.dw) {
-              args.push(data.dw);
-              if (data.dh) {
-                args.push(data.dh);
+            if ($.in.dw) {
+              args.push($.in.dw);
+              if ($.in.dh) {
+                args.push($.in.dh);
               }
             }
 
-            input.context.drawImage.apply(input.context, args);
+            $.context.drawImage.apply($.context, args);
             output({
-              context: input.context
+              context: $.get('context')
             });
           }.call(this);
           return {

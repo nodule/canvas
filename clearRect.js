@@ -16,9 +16,9 @@ module.exports = {
         required: "true",
         fn: function __CONTEXT__(data, x, source, state, input, output) {
           var r = function() {
-            data.clearRect(input.x, input.y, input.width, input.height);
+            $.context.clearRect($.x, $.y, $.width, $.height);
             output({
-              context: data
+              context: $.get('context')
             });
           }.call(this);
           return {

@@ -33,10 +33,10 @@ module.exports = {
         },
         fn: function __IN__(data, x, source, state, input, output) {
           var r = function() {
-            input.context.lineTo(data.x, data.y);
+            $.context.lineTo($.in.x, $.in.y);
             output({
-              context: input.context,
-              out: data
+              context: $.get('context'),
+              out: $.get('in')
             });
           }.call(this);
           return {

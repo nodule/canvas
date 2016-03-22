@@ -22,8 +22,8 @@ module.exports = {
         fn: function __TEXT__(data, x, source, state, input, output) {
           var r = function() {
             output({
-              metrics: input.context.measureText(data),
-              context: input.context
+              metrics: $.create($.context.measureText($.text)),
+              context: $.get('context')
             });
           }.call(this);
           return {

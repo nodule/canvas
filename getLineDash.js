@@ -17,8 +17,8 @@ module.exports = {
         fn: function __CONTEXT__(data, x, source, state, input, output) {
           var r = function() {
             output({
-              out: data.getLineDash(),
-              context: data
+              out: $.create($.context.getLineDash()),
+              context: $.get('context')
             });
           }.call(this);
           return {

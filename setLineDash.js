@@ -22,9 +22,9 @@ module.exports = {
         required: "true",
         fn: function __SEGMENT__(data, x, source, state, input, output) {
           var r = function() {
-            input.context.setLineDash(data);
+            $.context.setLineDash($.segment);
             output({
-              context: input.context
+              context: $.get('context')
             });
           }.call(this);
           return {
