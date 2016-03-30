@@ -18,7 +18,7 @@ module.exports = {
         title: "Element",
         async: true,
         type: "HTMLElement",
-        fn: function __ELEMENT__(data, x, source, state, input, output) {
+        fn: function __ELEMENT__(data, source, state, input, $, output) {
           var r = function() {
             output({
               out: $.create($.context.createImageData($.element, $.repetition)),

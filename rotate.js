@@ -19,7 +19,7 @@ module.exports = {
         async: true,
         type: "number",
         required: "true",
-        fn: function __ANGLE__(data, x, source, state, input, output) {
+        fn: function __ANGLE__(data, source, state, input, $, output) {
           var r = function() {
             $.context.rotate($.angle);
             output({

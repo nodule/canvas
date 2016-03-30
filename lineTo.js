@@ -31,7 +31,7 @@ module.exports = {
             description: "The y axis of the coordinate for the end of the line"
           }
         },
-        fn: function __IN__(data, x, source, state, input, output) {
+        fn: function __IN__(data, source, state, input, $, output) {
           var r = function() {
             $.context.lineTo($.in.x, $.in.y);
             output({

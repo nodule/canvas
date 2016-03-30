@@ -20,7 +20,7 @@ module.exports = {
         type: "array",
         async: true,
         required: "true",
-        fn: function __SEGMENT__(data, x, source, state, input, output) {
+        fn: function __SEGMENT__(data, source, state, input, $, output) {
           var r = function() {
             $.context.setLineDash($.segment);
             output({

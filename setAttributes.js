@@ -144,7 +144,7 @@ module.exports = {
             "default": "alphabetic"
           }
         },
-        fn: function __IN__(data, x, source, state, input, output) {
+        fn: function __IN__(data, source, state, input, $, output) {
           var r = function() {
             for (var k in $.in) {
               $.context[k] = $.in[k];

@@ -29,7 +29,7 @@ module.exports = {
             title: "Y"
           }
         },
-        fn: function __IN__(data, x, source, state, input, output) {
+        fn: function __IN__(data, source, state, input, $, output) {
           var r = function() {
             $.context.translate($.in.x, $.in.y);
             output({

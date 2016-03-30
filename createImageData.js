@@ -32,7 +32,7 @@ module.exports = {
             title: "Height"
           }
         },
-        fn: function __IN__(data, x, source, state, input, output) {
+        fn: function __IN__(data, source, state, input, $, output) {
           var r = function() {
             $.context.createImageData($.width, $.height);
             output({

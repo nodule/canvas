@@ -28,7 +28,7 @@ module.exports = {
         }],
         minItems: 2,
         maxItems: 2,
-        fn: function __IN__(data, x, source, state, input, output) {
+        fn: function __IN__(data, source, state, input, $, output) {
           var r = function() {
             $.context.scale($.in[0], $.in[1]);
             output({

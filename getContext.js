@@ -14,7 +14,7 @@ module.exports = {
         async: true,
         type: "HTMLElement",
         required: "true",
-        fn: function __CANVAS__(data, x, source, state, input, output) {
+        fn: function __CANVAS__(data, source, state, input, $, output) {
           var r = function() {
             output({
               context: $.create($.canvas.getContext('2d'))

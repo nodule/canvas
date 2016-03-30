@@ -14,7 +14,7 @@ module.exports = {
         async: true,
         type: "CanvasRenderingContext2D",
         required: "true",
-        fn: function __CONTEXT__(data, x, source, state, input, output) {
+        fn: function __CONTEXT__(data, source, state, input, $, output) {
           var r = function() {
             $.context.resetTransform();
             output({
