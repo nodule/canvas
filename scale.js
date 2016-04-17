@@ -12,13 +12,13 @@ module.exports = {
       context: {
         title: "Context",
         type: "CanvasRenderingContext2D",
-        required: "true"
+        required: true
       },
       "in": {
         title: "Scaling factor x/y",
         async: true,
         type: "array",
-        required: "true",
+        required: true,
         items: [{
           type: "number",
           title: "X"

@@ -12,13 +12,13 @@ module.exports = {
       context: {
         title: "Context",
         type: "CanvasRenderingContext2D",
-        required: "true"
+        required: true
       },
       "in": {
         title: "Point",
         async: true,
         type: "object",
-        required: "true",
+        required: true,
         properties: {
           x: {
             type: "number",

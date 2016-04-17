@@ -13,7 +13,7 @@ module.exports = {
         title: "Canvas",
         async: true,
         type: "HTMLElement",
-        required: "true",
+        required: true,
         fn: function __CANVAS__(data, source, state, input, $, output) {
           var r = function() {
             output({

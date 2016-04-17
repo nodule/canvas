@@ -12,25 +12,25 @@ module.exports = {
       text: {
         title: "Text",
         type: "string",
-        required: "true"
+        required: true
       },
       x: {
         title: "X",
         type: "number",
-        required: "true",
+        required: true,
         "default": 0
       },
       y: {
         title: "Y",
         type: "number",
-        required: "true",
+        required: true,
         "default": 0
       },
       context: {
         title: "Context",
         async: true,
         type: "CanvasRenderingContext2D",
-        required: "true",
+        required: true,
         fn: function __CONTEXT__(data, source, state, input, $, output) {
           var r = function() {
             $.context.strokeText($.text, $.x, $.y);

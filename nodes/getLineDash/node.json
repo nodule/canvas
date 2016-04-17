@@ -13,7 +13,7 @@
         "title": "Context",
         "async": true,
         "type": "CanvasRenderingContext2D",
-        "required": "true"
+        "required": true
       }
     },
     "output": {

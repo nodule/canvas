@@ -12,13 +12,13 @@ module.exports = {
       context: {
         title: "Context",
         type: "CanvasRenderingContext2D",
-        required: "true"
+        required: true
       },
       angle: {
         title: "Angle",
         async: true,
         type: "number",
-        required: "true",
+        required: true,
         fn: function __ANGLE__(data, source, state, input, $, output) {
           var r = function() {
             $.context.rotate($.angle);

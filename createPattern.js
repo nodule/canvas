@@ -12,7 +12,7 @@ module.exports = {
       context: {
         title: "Context",
         type: "CanvasRenderingContext2D",
-        required: "true"
+        required: true
       },
       element: {
         title: "Element",

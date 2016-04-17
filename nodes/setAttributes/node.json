@@ -12,13 +12,13 @@
       "context": {
         "title": "Context",
         "type": "CanvasRenderingContext2D",
-        "required": "true"
+        "required": true
       },
       "in": {
         "title": "Attributes",
         "type": "object",
         "async": true,
-        "required": "true",
+        "required": true,
         "properties": {
           "fillStyle": {
             "type": "string",

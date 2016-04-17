@@ -13,7 +13,7 @@ module.exports = {
         title: "Context",
         async: true,
         type: "CanvasRenderingContext2D",
-        required: "true",
+        required: true,
         fn: function __CONTEXT__(data, source, state, input, $, output) {
           var r = function() {
             $.context.clearRect($.x, $.y, $.width, $.height);

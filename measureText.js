@@ -12,13 +12,13 @@ module.exports = {
       context: {
         title: "Context",
         type: "CanvasRenderingContext2D",
-        required: "true"
+        required: true
       },
       text: {
         title: "Text",
         type: "string",
         async: true,
-        required: "true",
+        required: true,
         fn: function __TEXT__(data, source, state, input, $, output) {
           var r = function() {
             output({

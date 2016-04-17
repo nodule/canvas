@@ -13,7 +13,7 @@
         "title": "Canvas",
         "async": true,
         "type": "HTMLElement",
-        "required": "true"
+        "required": true
       }
     },
     "output": {

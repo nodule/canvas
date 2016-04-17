@@ -12,7 +12,7 @@ module.exports = {
       context: {
         title: "Context",
         type: "CanvasRenderingContext2D",
-        required: "true",
+        required: true,
         fn: function __CONTEXT__(data, source, state, input, $, output) {
           var r = function() {
             $.context.restore();

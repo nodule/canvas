@@ -15,7 +15,7 @@
             "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -42,7 +42,7 @@
             "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           },
           "x": {
             "title": "X",
@@ -89,7 +89,7 @@
             "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -116,7 +116,7 @@
             "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -143,7 +143,7 @@
             "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -169,7 +169,7 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           },
           "image": {
             "title": "imagedata",
@@ -218,7 +218,7 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           },
           "element": {
             "title": "Element",
@@ -262,7 +262,7 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           },
           "element": {
             "title": "Element",
@@ -347,7 +347,7 @@
             "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -374,7 +374,7 @@
             "title": "Canvas",
             "async": true,
             "type": "HTMLElement",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -401,7 +401,7 @@
             "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -431,13 +431,13 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           },
           "in": {
             "title": "Point",
             "async": true,
             "type": "object",
-            "required": "true",
+            "required": true,
             "properties": {
               "x": {
                 "type": "number",
@@ -479,13 +479,13 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           },
           "text": {
             "title": "Text",
             "type": "string",
             "async": true,
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -515,13 +515,13 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           },
           "in": {
             "title": "Point",
             "async": true,
             "type": "object",
-            "required": "true",
+            "required": true,
             "properties": {
               "x": {
                 "type": "number",
@@ -562,7 +562,7 @@
             "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -589,7 +589,7 @@
             "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -615,7 +615,7 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -641,13 +641,13 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           },
           "angle": {
             "title": "Angle",
             "async": true,
             "type": "number",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -674,7 +674,7 @@
             "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -700,13 +700,13 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           },
           "in": {
             "title": "Scaling factor x/y",
             "async": true,
             "type": "array",
-            "required": "true",
+            "required": true,
             "items": [
               {
                 "type": "number",
@@ -744,13 +744,13 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           },
           "in": {
             "title": "Attributes",
             "type": "object",
             "async": true,
-            "required": "true",
+            "required": true,
             "properties": {
               "fillStyle": {
                 "type": "string",
@@ -906,14 +906,14 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           },
           "segment": {
             "title": "Segment",
             "description": "An even number of non-negative numbers specifying a dash list.",
             "type": "array",
             "async": true,
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -940,7 +940,7 @@
             "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -966,25 +966,25 @@
           "text": {
             "title": "Text",
             "type": "string",
-            "required": "true"
+            "required": true
           },
           "x": {
             "title": "X",
             "type": "number",
-            "required": "true",
+            "required": true,
             "default": 0
           },
           "y": {
             "title": "Y",
             "type": "number",
-            "required": "true",
+            "required": true,
             "default": 0
           },
           "context": {
             "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           }
         },
         "output": {
@@ -1010,13 +1010,13 @@
           "context": {
             "title": "Context",
             "type": "CanvasRenderingContext2D",
-            "required": "true"
+            "required": true
           },
           "in": {
             "title": "Point",
             "async": true,
             "type": "object",
-            "required": "true",
+            "required": true,
             "properties": {
               "x": {
                 "type": "number",
