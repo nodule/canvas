@@ -9,6 +9,14 @@
   "dependencies": {},
   "nodes": [
     {
+      "name": "beginPath",
+      "ns": "canvas",
+      "async": true,
+      "title": "Begin Path",
+      "description": "Begin path",
+      "phrases": {
+        "active": "Beginning path"
+      },
       "ports": {
         "input": {
           "context": {
@@ -25,17 +33,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Beginning path"
-      },
-      "description": "Begin path",
-      "title": "Begin Path",
-      "async": true,
-      "ns": "canvas",
-      "name": "beginPath",
       "fn": "on.input.context = function() {\n  $.context.beginPath();\n  output({ context: $.get('context') });\n};\n"
     },
     {
+      "name": "clearRect",
+      "ns": "canvas",
+      "async": true,
+      "title": "Clear Rectangle",
+      "description": "Sets all pixels in the rectangle defined by starting point (x, y) and size (width, height) to transparent black.",
+      "phrases": {
+        "active": "Clearing rectangle"
+      },
       "ports": {
         "input": {
           "context": {
@@ -72,71 +80,44 @@
           }
         }
       },
-      "phrases": {
-        "active": "Clearing rectangle"
-      },
-      "description": "Sets all pixels in the rectangle defined by starting point (x, y) and size (width, height) to transparent black.",
-      "title": "Clear Rectangle",
-      "async": true,
-      "ns": "canvas",
-      "name": "clearRect",
       "fn": "on.input.context = function() {\n  $.context.clearRect($.x, $.y, $.width, $.height);\n  output({ context: $.get('context') });\n};\n"
     },
     {
-      "ports": {
-        "input": {
-          "context": {
-            "title": "Context",
-            "async": true,
-            "type": "CanvasRenderingContext2D",
-            "required": true
-          }
-        },
-        "output": {
-          "context": {
-            "title": "Context",
-            "type": "CanvasRenderingContext2D"
-          }
-        }
-      },
+      "name": "clip",
+      "ns": "canvas",
+      "async": true,
+      "title": "Clip",
+      "description": "Clip",
       "phrases": {
         "active": "Clipping"
       },
-      "description": "Clip",
-      "title": "Clip",
-      "async": true,
-      "ns": "canvas",
-      "name": "clip",
+      "ports": {
+        "input": {
+          "context": {
+            "title": "Context",
+            "async": true,
+            "type": "CanvasRenderingContext2D",
+            "required": true
+          }
+        },
+        "output": {
+          "context": {
+            "title": "Context",
+            "type": "CanvasRenderingContext2D"
+          }
+        }
+      },
       "fn": "on.input.context = function() {\n  $.context.clip();\n  output({ context: $.get('context') });\n};\n"
     },
     {
-      "ports": {
-        "input": {
-          "context": {
-            "title": "Context",
-            "async": true,
-            "type": "CanvasRenderingContext2D",
-            "required": true
-          }
-        },
-        "output": {
-          "context": {
-            "title": "Context",
-            "type": "CanvasRenderingContext2D"
-          }
-        }
-      },
+      "name": "closePath",
+      "ns": "canvas",
+      "async": true,
+      "title": "Close Path",
+      "description": "Close path",
       "phrases": {
         "active": "Closing path"
       },
-      "description": "Close path",
-      "title": "Close Path",
-      "async": true,
-      "ns": "canvas",
-      "name": "closePath",
-      "fn": "on.input.context = function() {\n  $.context.closePath();\n  output({ context: $.get('context') });\n};\n"
-    },
-    {
       "ports": {
         "input": {
           "context": {
@@ -153,17 +134,44 @@
           }
         }
       },
+      "fn": "on.input.context = function() {\n  $.context.closePath();\n  output({ context: $.get('context') });\n};\n"
+    },
+    {
+      "name": "commit",
+      "ns": "canvas",
+      "async": true,
+      "title": "Commit",
+      "description": "Commit Context",
       "phrases": {
         "active": "Committing context"
       },
-      "description": "Commit Context",
-      "title": "Commit",
-      "async": true,
-      "ns": "canvas",
-      "name": "commit",
+      "ports": {
+        "input": {
+          "context": {
+            "title": "Context",
+            "async": true,
+            "type": "CanvasRenderingContext2D",
+            "required": true
+          }
+        },
+        "output": {
+          "context": {
+            "title": "Context",
+            "type": "CanvasRenderingContext2D"
+          }
+        }
+      },
       "fn": "on.input.context = function() {\n  $.context.commit();\n  output({ context: $.get('context') });\n};\n"
     },
     {
+      "name": "createImageData",
+      "ns": "canvas",
+      "async": true,
+      "title": "Create Image Data",
+      "description": "Creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black",
+      "phrases": {
+        "active": "Creating image data"
+      },
       "ports": {
         "input": {
           "context": {
@@ -202,17 +210,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Creating image data"
-      },
-      "description": "Creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black",
-      "title": "Create Image Data",
-      "async": true,
-      "ns": "canvas",
-      "name": "createImageData",
       "fn": "on.input.in = function() {\n  $.context.createImageData($.width, $.height);\n  output({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
     },
     {
+      "name": "createPattern",
+      "ns": "canvas",
+      "async": true,
+      "title": "Create Pattern",
+      "description": "A DOM element to use as the source image for the pattern. This can be any element, although typically you'll use an Image or <canvas>",
+      "phrases": {
+        "active": "Creating pattern"
+      },
       "ports": {
         "input": {
           "context": {
@@ -246,17 +254,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Creating pattern"
-      },
-      "description": "A DOM element to use as the source image for the pattern. This can be any element, although typically you'll use an Image or <canvas>",
-      "title": "Create Pattern",
-      "async": true,
-      "ns": "canvas",
-      "name": "createPattern",
       "fn": "on.input.element = function() {\n  output({\n    out: $.create($.context.createImageData($.element, $.repetition)),\n    context: $.get('context') \n  });\n};\n"
     },
     {
+      "name": "drawImage",
+      "ns": "canvas",
+      "async": true,
+      "title": "Draw Image",
+      "description": "",
+      "phrases": {
+        "active": "Drawing image"
+      },
       "ports": {
         "input": {
           "context": {
@@ -330,17 +338,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Drawing image"
-      },
-      "description": "",
-      "title": "Draw Image",
-      "async": true,
-      "ns": "canvas",
-      "name": "drawImage",
       "fn": "on.input.in = function() {\n  var args = [$.element];\n\n  if($.in.sx && $.in.sy && $.in.sw && $.in.sh) {\n    args.push($.in.sx);\n    args.push($.in.sy);\n    args.push($.in.sw);\n    args.push($.in.sh);\n  }\n\n  args.push($.in.dx || 0);\n  args.push($.in.dy || 0);\n\n  if($.in.dw) {\n    args.push($.in.dw);\n    if($.in.dh) {\n      args.push($.in.dh);\n    }\n  }\n\n  $.context.drawImage.apply($.context, args);\n  output({\n    context: $.get('context')\n  });\n\n};\n"
     },
     {
+      "name": "fill",
+      "ns": "canvas",
+      "async": true,
+      "title": "Fill",
+      "description": "Fill Context",
+      "phrases": {
+        "active": "Filling context"
+      },
       "ports": {
         "input": {
           "context": {
@@ -357,17 +365,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Filling context"
-      },
-      "description": "Fill Context",
-      "title": "Fill",
-      "async": true,
-      "ns": "canvas",
-      "name": "fill",
       "fn": "on.input.context = function() {\n  $.context.fill();\n  output({ context: $.get('context') });\n};\n"
     },
     {
+      "name": "getContext",
+      "ns": "canvas",
+      "async": true,
+      "title": "Get Context",
+      "description": "Get Canvas Context",
+      "phrases": {
+        "active": "Getting context"
+      },
       "ports": {
         "input": {
           "canvas": {
@@ -384,17 +392,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Getting context"
-      },
-      "description": "Get Canvas Context",
-      "title": "Get Context",
-      "async": true,
-      "ns": "canvas",
-      "name": "getContext",
       "fn": "on.input.canvas = function() {\n  output({\n    context: $.create($.canvas.getContext('2d'))\n  });\n};\n"
     },
     {
+      "name": "getLineDash",
+      "ns": "canvas",
+      "async": true,
+      "title": "Get Line Dash",
+      "description": "Get Line Dash",
+      "phrases": {
+        "active": "Getting line dash"
+      },
       "ports": {
         "input": {
           "context": {
@@ -415,17 +423,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Getting line dash"
-      },
-      "description": "Get Line Dash",
-      "title": "Get Line Dash",
-      "async": true,
-      "ns": "canvas",
-      "name": "getLineDash",
       "fn": "on.input.context = function() {\n  output({\n    out: $.create($.context.getLineDash()),\n    context: $.get('context')\n  });\n};\n"
     },
     {
+      "name": "lineTo",
+      "ns": "canvas",
+      "async": true,
+      "title": "Line To",
+      "description": "Connects the last point in the subpath to the x, y coordinates with a straight line",
+      "phrases": {
+        "active": "Moving"
+      },
       "ports": {
         "input": {
           "context": {
@@ -463,17 +471,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Moving"
-      },
-      "description": "Connects the last point in the subpath to the x, y coordinates with a straight line",
-      "title": "Line To",
-      "async": true,
-      "ns": "canvas",
-      "name": "lineTo",
       "fn": "on.input.in = function() {\n  $.context.lineTo($.in.x, $.in.y);\n  output({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
     },
     {
+      "name": "measureText",
+      "ns": "canvas",
+      "async": true,
+      "title": "Measure Text",
+      "description": "Measure Text",
+      "phrases": {
+        "active": "Measuring text"
+      },
       "ports": {
         "input": {
           "context": {
@@ -499,17 +507,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Measuring text"
-      },
-      "description": "Measure Text",
-      "title": "Measure Text",
-      "async": true,
-      "ns": "canvas",
-      "name": "measureText",
       "fn": "on.input.text= function() {\n  output({\n    metrics: $.create($.context.measureText($.text)),\n    context: $.get('context')\n  });\n};\n"
     },
     {
+      "name": "moveTo",
+      "ns": "canvas",
+      "async": true,
+      "title": "Move To",
+      "description": "Moves the starting point of a new subpath to the (x, y) coordinates",
+      "phrases": {
+        "active": "Moving"
+      },
       "ports": {
         "input": {
           "context": {
@@ -545,17 +553,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Moving"
-      },
-      "description": "Moves the starting point of a new subpath to the (x, y) coordinates",
-      "title": "Move To",
-      "async": true,
-      "ns": "canvas",
-      "name": "moveTo",
       "fn": "on.input.in = function() {\n  $.context.moveTo($.in.x, $.in.y);\n  output({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
     },
     {
+      "name": "resetClip",
+      "ns": "canvas",
+      "async": true,
+      "title": "Reset Clip",
+      "description": "Reset Clip",
+      "phrases": {
+        "active": "Resetting clip"
+      },
       "ports": {
         "input": {
           "context": {
@@ -572,17 +580,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Resetting clip"
-      },
-      "description": "Reset Clip",
-      "title": "Reset Clip",
-      "async": true,
-      "ns": "canvas",
-      "name": "resetClip",
       "fn": "on.input.context = function() {\n  $.context.resetClip();\n  output({ context: $.get('context') });\n};\n"
     },
     {
+      "name": "resetTransform",
+      "ns": "canvas",
+      "async": true,
+      "title": "Reset Transform",
+      "description": "Reset Transform",
+      "phrases": {
+        "active": "Resetting clip"
+      },
       "ports": {
         "input": {
           "context": {
@@ -599,17 +607,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Resetting clip"
-      },
-      "description": "Reset Transform",
-      "title": "Reset Transform",
-      "async": true,
-      "ns": "canvas",
-      "name": "resetTransform",
       "fn": "on.input.context = function() {\n  $.context.resetTransform();\n  output({ context: $.get('context') });\n};\n"
     },
     {
+      "name": "restore",
+      "ns": "canvas",
+      "async": true,
+      "title": "Restore",
+      "description": "Restore Context",
+      "phrases": {
+        "active": "Restoring"
+      },
       "ports": {
         "input": {
           "context": {
@@ -625,17 +633,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Restoring"
-      },
-      "description": "Restore Context",
-      "title": "Restore",
-      "async": true,
-      "ns": "canvas",
-      "name": "restore",
       "fn": "on.input.context = function() {\n  $.context.restore();\n  output({\n    context: $.get('context')\n  });\n};\n"
     },
     {
+      "name": "rotate",
+      "ns": "canvas",
+      "async": true,
+      "title": "Rotate",
+      "description": "Rotate Context",
+      "phrases": {
+        "active": "Rotating"
+      },
       "ports": {
         "input": {
           "context": {
@@ -657,17 +665,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Rotating"
-      },
-      "description": "Rotate Context",
-      "title": "Rotate",
-      "async": true,
-      "ns": "canvas",
-      "name": "rotate",
       "fn": "on.input.angle = function() {\n  $.context.rotate($.angle);\n  output({\n    context: $.get('context')\n  });\n};\n"
     },
     {
+      "name": "save",
+      "ns": "canvas",
+      "async": true,
+      "title": "Save",
+      "description": "Save Context",
+      "phrases": {
+        "active": "Saving context"
+      },
       "ports": {
         "input": {
           "context": {
@@ -684,17 +692,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Saving context"
-      },
-      "description": "Save Context",
-      "title": "Save",
-      "async": true,
-      "ns": "canvas",
-      "name": "save",
       "fn": "on.input.context = function() {\n  $.context.save();\n  output({ context: $.get('context') });\n};\n"
     },
     {
+      "name": "scale",
+      "ns": "canvas",
+      "async": true,
+      "title": "Scale",
+      "description": "Scale",
+      "phrases": {
+        "active": "Scaling"
+      },
       "ports": {
         "input": {
           "context": {
@@ -728,17 +736,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Scaling"
-      },
-      "description": "Scale",
-      "title": "Scale",
-      "async": true,
-      "ns": "canvas",
-      "name": "scale",
       "fn": "on.input.in = function() {\n  $.context.scale($.in[0], $.in[1]);\n  output({ context: $.get('context') });\n};\n"
     },
     {
+      "name": "setAttributes",
+      "ns": "canvas",
+      "async": true,
+      "title": "Set Attributes",
+      "description": "Sets one or more attributes",
+      "phrases": {
+        "active": "Setting attributes"
+      },
       "ports": {
         "input": {
           "context": {
@@ -890,17 +898,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Setting attributes"
-      },
-      "description": "Sets one or more attributes",
-      "title": "Set Attributes",
-      "async": true,
-      "ns": "canvas",
-      "name": "setAttributes",
       "fn": "on.input.in = function() {\n  for(var k in $.in) {\n    $.context[k] = $.in[k];\n  }\n  output({\n    context: $.get('context')\n  });\n};\n"
     },
     {
+      "name": "setLineDash",
+      "ns": "canvas",
+      "async": true,
+      "title": "Set Line Dash",
+      "description": "Set Line Dash",
+      "phrases": {
+        "active": "Setting line dash"
+      },
       "ports": {
         "input": {
           "context": {
@@ -923,17 +931,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Setting line dash"
-      },
-      "description": "Set Line Dash",
-      "title": "Set Line Dash",
-      "async": true,
-      "ns": "canvas",
-      "name": "setLineDash",
       "fn": "on.input.segment = function() {\n  $.context.setLineDash($.segment);\n  output({\n    context: $.get('context')\n  });\n};\n"
     },
     {
+      "name": "stroke",
+      "ns": "canvas",
+      "async": true,
+      "title": "Stroke",
+      "description": "Stroke",
+      "phrases": {
+        "active": "Stroking path"
+      },
       "ports": {
         "input": {
           "context": {
@@ -950,17 +958,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Stroking path"
-      },
-      "description": "Stroke",
-      "title": "Stroke",
-      "async": true,
-      "ns": "canvas",
-      "name": "stroke",
       "fn": "on.input.context = function() {\n  $.context.stroke();\n  output({ context: $.get('context') });\n};\n"
     },
     {
+      "name": "strokeText",
+      "ns": "canvas",
+      "async": true,
+      "title": "Stroke Text",
+      "description": "Stroke Text",
+      "phrases": {
+        "active": "Stroking text"
+      },
       "ports": {
         "input": {
           "text": {
@@ -994,17 +1002,17 @@
           }
         }
       },
-      "phrases": {
-        "active": "Stroking text"
-      },
-      "description": "Stroke Text",
-      "title": "Stroke Text",
-      "async": true,
-      "ns": "canvas",
-      "name": "strokeText",
       "fn": "on.input.context = function() {\n  $.context.strokeText($.text, $.x, $.y);\n  output({ context: $.get('context') });\n};\n"
     },
     {
+      "name": "translate",
+      "ns": "canvas",
+      "async": true,
+      "title": "Translate",
+      "description": "Moves the origin point of the context to (x, y)",
+      "phrases": {
+        "active": "Translating context"
+      },
       "ports": {
         "input": {
           "context": {
@@ -1040,16 +1048,7 @@
           }
         }
       },
-      "phrases": {
-        "active": "Translating context"
-      },
-      "description": "Moves the origin point of the context to (x, y)",
-      "title": "Translate",
-      "async": true,
-      "ns": "canvas",
-      "name": "translate",
       "fn": "on.input.in = function() {\n  $.context.translate($.in.x, $.in.y);\n  output({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
     }
-  ],
-  "twigs": []
+  ]
 }
