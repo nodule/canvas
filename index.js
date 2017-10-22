@@ -4,6 +4,7 @@ module.exports = {
   clip: require('./clip'),
   closePath: require('./closePath'),
   commit: require('./commit'),
+  createCanvas: require('./createCanvas'),
   createImageData: require('./createImageData'),
   createPattern: require('./createPattern'),
   drawImage: require('./drawImage'),

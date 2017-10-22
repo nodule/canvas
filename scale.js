@@ -20,12 +20,14 @@ module.exports = {
         type: "array",
         required: true,
         items: [{
-          type: "number",
-          title: "X"
-        }, {
-          type: "number",
-          title: "Y"
-        }],
+            type: "number",
+            title: "X"
+          },
+          {
+            type: "number",
+            title: "Y"
+          }
+        ],
         minItems: 2,
         maxItems: 2,
         fn: function __IN__(data, source, state, input, $, output) {
