@@ -196,7 +196,7 @@
       "title": "Create Canvas",
       "ns": "canvas",
       "name": "createCanvas",
-      "fn": "output = function() {\n  cb({\n    canvas: $.create(canvas.createCanvas())\n  });\n  done();\n};\n"
+      "fn": "output = function() {\n  cb({\n    out: $.create(canvas.createCanvas())\n  });\n  done();\n};\n"
     },
     {
       "ports": {

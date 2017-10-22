@@ -32,8 +32,9 @@ module.exports = {
   fn: function createCanvas(input, $, output, state, done, cb, on, canvas) {
     var r = function() {
       output({
-        canvas: $.create(canvas.createCanvas())
+        out: $.create(canvas.createCanvas())
       });
+      done();
     }.call(this);
     return {
       output: output,
