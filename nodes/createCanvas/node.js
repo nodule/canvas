@@ -1,5 +1,6 @@
 output = function() {
-  output({
+  cb({
     canvas: $.create(canvas.createCanvas())
   });
+  done();
 };
