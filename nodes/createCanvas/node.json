@@ -1,0 +1,32 @@
+{
+  "name": "createCanvas",
+  "ns": "canvas",
+  "title": "Create Canvas",
+  "description": "Creat Canvas",
+  "phrases": {
+    "active": "Creating Canvas"
+  },
+  "ports": {
+    "input": {
+      "width": {
+        "title": "Width",
+        "type": "number"
+      },
+      "height": {
+        "title": "Height",
+        "type": "number"
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Canvas",
+        "type": "Canvas"
+      }
+    }
+  },
+  "dependencies": {
+    "npm" : {
+      "canvas": "latest"
+    }
+  }
+}
