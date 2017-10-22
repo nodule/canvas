@@ -7,7 +7,7 @@
     "url": "https://github.com/nodule/canvas.git"
   },
   "dependencies": {
-    "canvas": "^1.6.7"
+    "canvas": "^2.0.0-alpha.5"
   },
   "nodes": [
     {
@@ -168,7 +168,7 @@
     {
       "dependencies": {
         "npm": {
-          "canvas": "latest"
+          "canvas": "^2.0.0-alpha.5"
         }
       },
       "ports": {
@@ -1085,6 +1085,5 @@
       "name": "translate",
       "fn": "on.input.in = function() {\n  $.context.translate($.in.x, $.in.y);\n  output({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
     }
-  ],
-  "twigs": []
+  ]
 }
