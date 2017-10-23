@@ -12,8 +12,7 @@
       "canvas": {
         "title": "Canvas",
         "async": true,
-        "type": "HTMLElement",
-        "required": true
+        "type": ["HTMLCanvasElement", "Canvas"]
       }
     },
     "output": {

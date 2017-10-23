@@ -12,8 +12,9 @@ module.exports = {
       canvas: {
         title: "Canvas",
         async: true,
-        type: "HTMLElement",
-        required: true,
+        type: ["HTMLCanvasElement",
+          "Canvas"
+        ],
         fn: function __CANVAS__(data, source, state, input, $, output) {
           var r = function() {
             output({
