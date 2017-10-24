@@ -300,7 +300,10 @@
           },
           "image": {
             "title": "Element",
-            "type": "HTMLElement",
+            "type": [
+              "HTMLElement",
+              "Image"
+            ],
             "async": true
           },
           "args": {

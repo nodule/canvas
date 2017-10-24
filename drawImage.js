@@ -15,7 +15,9 @@ module.exports = {
       },
       image: {
         title: "Element",
-        type: "HTMLElement",
+        type: ["HTMLElement",
+          "Image"
+        ],
         async: true,
         fn: function __IMAGE__(data, source, state, input, $, output) {
           var r = function() {
