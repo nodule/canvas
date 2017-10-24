@@ -1,4 +1,4 @@
-on.input.in = function() {
+on.input.image = function() {
   var args = [$.image];
 
   if($.args.sx && $.args.sy && $.args.sw && $.args.sh) {

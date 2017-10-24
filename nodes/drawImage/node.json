@@ -9,19 +9,17 @@
   },
   "ports": {
     "input": {
-      "context": {
+      "in": {
         "title": "Context",
-        "type": "CanvasRenderingContext2D",
-        "required": true
+        "type": "CanvasRenderingContext2D"
       },
-      "element": {
+      "image": {
         "title": "Element",
         "type": "HTMLElement",
-        "required": true
+        "async": true
       },
-      "in": {
+      "args": {
         "title": "Dimensions",
-        "async": true,
         "type": "object",
         "properties": {
           "dx": {
@@ -74,7 +72,7 @@
       }
     },
     "output": {
-      "context": {
+      "out": {
         "title": "Context",
         "type": "CanvasRenderingContext2D"
       }

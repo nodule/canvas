@@ -9,19 +9,48 @@ module.exports = {
   },
   ports: {
     input: {
-      context: {
+      "in": {
         title: "Context",
-        type: "CanvasRenderingContext2D",
-        required: true
+        type: "CanvasRenderingContext2D"
       },
-      element: {
+      image: {
         title: "Element",
         type: "HTMLElement",
-        required: true
-      },
-      "in": {
-        title: "Dimensions",
         async: true,
+        fn: function __IMAGE__(data, source, state, input, $, output) {
+          var r = function() {
+            var args = [$.image];
+
+            if ($.args.sx && $.args.sy && $.args.sw && $.args.sh) {
+              args.push($.args.sx);
+              args.push($.args.sy);
+              args.push($.args.sw);
+              args.push($.args.sh);
+            }
+
+            args.push($.args.dx || 0);
+            args.push($.args.dy || 0);
+
+            if ($.args.dw) {
+              args.push($.args.dw);
+              if ($.args.dh) {
+                args.push($.args.dh);
+              }
+            }
+
+            $.in.drawImage.apply($.in, args);
+            output({
+              out: $.get('in')
+            });
+          }.call(this);
+          return {
+            state: state,
+            return: r
+          };
+        }
+      },
+      args: {
+        title: "Dimensions",
         type: "object",
         properties: {
           dx: {
@@ -70,42 +99,11 @@ module.exports = {
             description: "The height of the sub-rectangle of the source image to draw into the destination context. If you specify a negative value, the image is flipped vertically when drawn.",
             required: false
           }
-        },
-        fn: function __IN__(data, source, state, input, $, output) {
-          var r = function() {
-            var args = [$.image];
-
-            if ($.args.sx && $.args.sy && $.args.sw && $.args.sh) {
-              args.push($.args.sx);
-              args.push($.args.sy);
-              args.push($.args.sw);
-              args.push($.args.sh);
-            }
-
-            args.push($.args.dx || 0);
-            args.push($.args.dy || 0);
-
-            if ($.args.dw) {
-              args.push($.args.dw);
-              if ($.args.dh) {
-                args.push($.args.dh);
-              }
-            }
-
-            $.in.drawImage.apply($.in, args);
-            output({
-              out: $.get('in')
-            });
-          }.call(this);
-          return {
-            state: state,
-            return: r
-          };
         }
       }
     },
     output: {
-      context: {
+      out: {
         title: "Context",
         type: "CanvasRenderingContext2D"
       }

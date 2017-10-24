@@ -294,19 +294,17 @@
     {
       "ports": {
         "input": {
-          "context": {
+          "in": {
             "title": "Context",
-            "type": "CanvasRenderingContext2D",
-            "required": true
+            "type": "CanvasRenderingContext2D"
           },
-          "element": {
+          "image": {
             "title": "Element",
             "type": "HTMLElement",
-            "required": true
+            "async": true
           },
-          "in": {
+          "args": {
             "title": "Dimensions",
-            "async": true,
             "type": "object",
             "properties": {
               "dx": {
@@ -359,7 +357,7 @@
           }
         },
         "output": {
-          "context": {
+          "out": {
             "title": "Context",
             "type": "CanvasRenderingContext2D"
           }
@@ -373,7 +371,7 @@
       "async": true,
       "ns": "canvas",
       "name": "drawImage",
-      "fn": "on.input.in = function() {\n  var args = [$.image];\n\n  if($.args.sx && $.args.sy && $.args.sw && $.args.sh) {\n    args.push($.args.sx);\n    args.push($.args.sy);\n    args.push($.args.sw);\n    args.push($.args.sh);\n  }\n\n  args.push($.args.dx || 0);\n  args.push($.args.dy || 0);\n\n  if($.args.dw) {\n    args.push($.args.dw);\n    if($.args.dh) {\n      args.push($.args.dh);\n    }\n  }\n\n  $.in.drawImage.apply($.in, args);\n  output({\n    out: $.get('in')\n  });\n};\n"
+      "fn": "on.input.image = function() {\n  var args = [$.image];\n\n  if($.args.sx && $.args.sy && $.args.sw && $.args.sh) {\n    args.push($.args.sx);\n    args.push($.args.sy);\n    args.push($.args.sw);\n    args.push($.args.sh);\n  }\n\n  args.push($.args.dx || 0);\n  args.push($.args.dy || 0);\n\n  if($.args.dw) {\n    args.push($.args.dw);\n    if($.args.dh) {\n      args.push($.args.dh);\n    }\n  }\n\n  $.in.drawImage.apply($.in, args);\n  output({\n    out: $.get('in')\n  });\n};\n"
     },
     {
       "ports": {
