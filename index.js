@@ -12,6 +12,7 @@ module.exports = {
   getContext: require('./getContext'),
   getLineDash: require('./getLineDash'),
   lineTo: require('./lineTo'),
+  loadImage: require('./loadImage'),
   measureText: require('./measureText'),
   moveTo: require('./moveTo'),
   resetClip: require('./resetClip'),

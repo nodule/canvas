@@ -511,6 +511,35 @@
       "fn": "on.input.in = function() {\n  $.context.lineTo($.in.x, $.in.y);\n  output({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "canvas": "^2.0.0-alpha.5"
+        }
+      },
+      "ports": {
+        "input": {
+          "path": {
+            "title": "Path",
+            "type": "string"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Image",
+            "type": "object"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Loading image"
+      },
+      "description": "Load image",
+      "title": "Load Image",
+      "ns": "canvas",
+      "name": "loadImage",
+      "fn": "output = function() {\n  canvas.loadImage($.path).then(function(image) {\n    cb({\n      out: $.write('path', image)\n    });\n    done();\n  })\n  .catch(function (error) {\n    cb({\n      error: $.write('path', error)\n    });\n    done();\n  });\n};\n"
+    },
+    {
       "ports": {
         "input": {
           "context": {
