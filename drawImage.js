@@ -14,7 +14,7 @@ module.exports = {
         type: "CanvasRenderingContext2D"
       },
       image: {
-        title: "Element",
+        title: "Image",
         type: ["HTMLElement",
           "Image"
         ],

@@ -16,7 +16,7 @@ module.exports = {
     output: {
       out: {
         title: "Image",
-        type: "object"
+        type: "Image"
       }
     }
   },

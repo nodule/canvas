@@ -299,7 +299,7 @@
             "type": "CanvasRenderingContext2D"
           },
           "image": {
-            "title": "Element",
+            "title": "Image",
             "type": [
               "HTMLElement",
               "Image"
@@ -529,7 +529,7 @@
         "output": {
           "out": {
             "title": "Image",
-            "type": "object"
+            "type": "Image"
           }
         }
       },
