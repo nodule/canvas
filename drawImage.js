@@ -58,12 +58,14 @@ module.exports = {
           dx: {
             title: "Destination X",
             type: "number",
-            description: "The X coordinate in the destination canvas at which to place the top-left corner of the source image."
+            description: "The X coordinate in the destination canvas at which to place the top-left corner of the source image.",
+            "default": 0
           },
           dy: {
             title: "Destination Y",
             type: "number",
-            description: "The Y coordinate in the destination canvas at which to place the top-left corner of the source image."
+            description: "The Y coordinate in the destination canvas at which to place the top-left corner of the source image.",
+            "default": 0
           },
           dw: {
             title: "Destination Width",
