@@ -1,0 +1,29 @@
+{
+  "name": "readImage",
+  "ns": "canvas",
+  "title": "Read Image",
+  "description": "Read image",
+  "phrases": {
+    "active": "Reading image"
+  },
+  "ports": {
+    "input": {
+      "path": {
+        "title": "Path",
+        "type": "string"
+      }
+    },
+    "output": {
+      "out": {
+        "title": "Image",
+        "type": "Image"
+      }
+    }
+  },
+  "dependencies": {
+    "npm" : {
+      "canvas": "^2.0.0-alpha.5",
+      "fs": "internal"
+    }
+  }
+}

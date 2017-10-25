@@ -625,6 +625,36 @@
       "fn": "on.input.in = function() {\n  $.context.moveTo($.in.x, $.in.y);\n  output({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "canvas": "^2.0.0-alpha.5",
+          "fs": "internal"
+        }
+      },
+      "ports": {
+        "input": {
+          "path": {
+            "title": "Path",
+            "type": "string"
+          }
+        },
+        "output": {
+          "out": {
+            "title": "Image",
+            "type": "Image"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Reading image"
+      },
+      "description": "Read image",
+      "title": "Read Image",
+      "ns": "canvas",
+      "name": "readImage",
+      "fn": "output = function() {\n  var image = new canvas.Image()\n  image.src = fs.readFileSync($.path)\n\n  cb({\n    out: $.write('path', image)\n  });\n};\n"
+    },
+    {
       "ports": {
         "input": {
           "context": {

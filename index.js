@@ -15,6 +15,7 @@ module.exports = {
   loadImage: require('./loadImage'),
   measureText: require('./measureText'),
   moveTo: require('./moveTo'),
+  readImage: require('./readImage'),
   resetClip: require('./resetClip'),
   resetTransform: require('./resetTransform'),
   restore: require('./restore'),
