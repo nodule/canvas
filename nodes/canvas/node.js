@@ -1,1 +1,1 @@
-output.module = canvas
+output = function() { cb({module: $.create(canvas, 'function')}); }

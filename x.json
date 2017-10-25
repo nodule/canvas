@@ -59,7 +59,7 @@
       "title": "Canvas module",
       "ns": "canvas",
       "name": "canvas",
-      "fn": "output.module = canvas\n"
+      "fn": "output = function() { cb({module: $.create(canvas, 'function')}); }\n"
     },
     {
       "ports": {

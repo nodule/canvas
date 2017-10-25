@@ -22,7 +22,7 @@ module.exports = {
   },
   fn: function canvas(input, $, output, state, done, cb, on, canvas) {
     var r = function() {
-      output.module = canvas
+      module: $.create(canvas, 'function')
     }.call(this);
     return {
       output: output,
