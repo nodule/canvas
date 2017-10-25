@@ -38,30 +38,6 @@
       "fn": "on.input.context = function() {\n  $.context.beginPath();\n  output({ context: $.get('context') });\n};\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "canvas": "^2.0.0-alpha.5"
-        }
-      },
-      "ports": {
-        "input": {},
-        "output": {
-          "module": {
-            "title": "Canvas",
-            "type": "function"
-          }
-        }
-      },
-      "phrases": {
-        "active": "Requiring canvas module"
-      },
-      "description": "Provides the canvas module while multiple requires from different locations won't work",
-      "title": "Canvas module",
-      "ns": "canvas",
-      "name": "canvas",
-      "fn": "output = function() { cb({module: $.create(canvas, 'function')}); }\n"
-    },
-    {
       "ports": {
         "input": {
           "context": {
@@ -190,12 +166,13 @@
       "fn": "on.input.context = function() {\n  $.context.commit();\n  output({ context: $.get('context') });\n};\n"
     },
     {
+      "dependencies": {
+        "npm": {
+          "canvas": "^2.0.0-alpha.5"
+        }
+      },
       "ports": {
         "input": {
-          "module": {
-            "title": "Canvas Module",
-            "type": "function"
-          },
           "width": {
             "title": "Width",
             "type": "number"
@@ -219,7 +196,7 @@
       "title": "Create Canvas",
       "ns": "canvas",
       "name": "createCanvas",
-      "fn": "output = function() {\n  cb({\n    out: $.create($.module.createCanvas())\n  });\n  done();\n};\n"
+      "fn": "output = function() {\n  cb({\n    out: $.create(canvas.createCanvas($.width, $.height))\n  });\n  done();\n};\n"
     },
     {
       "ports": {
@@ -544,10 +521,6 @@
       },
       "ports": {
         "input": {
-          "module": {
-            "title": "Module",
-            "type": "function"
-          },
           "path": {
             "title": "Path",
             "type": "string"
@@ -567,7 +540,7 @@
       "title": "Load Image",
       "ns": "canvas",
       "name": "loadImage",
-      "fn": "output = function() {\n  $.module.loadImage($.path).then(function(image) {\n    cb({\n      out: $.write('path', image)\n    });\n    done();\n  })\n  .catch(function (error) {\n    cb({\n      error: $.write('path', error)\n    });\n    done();\n  });\n};\n"
+      "fn": "output = function() {\n  canvas.loadImage($.path).then(function(image) {\n    cb({\n      out: $.write('path', image)\n    });\n    done();\n  })\n  .catch(function (error) {\n    cb({\n      error: $.write('path', error)\n    });\n    done();\n  });\n};\n"
     },
     {
       "ports": {
@@ -650,39 +623,6 @@
       "ns": "canvas",
       "name": "moveTo",
       "fn": "on.input.in = function() {\n  $.context.moveTo($.in.x, $.in.y);\n  output({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
-    },
-    {
-      "dependencies": {
-        "npm": {
-          "fs": "internal"
-        }
-      },
-      "ports": {
-        "input": {
-          "module": {
-            "title": "Canvas Module",
-            "type": "function"
-          },
-          "path": {
-            "title": "Path",
-            "type": "string"
-          }
-        },
-        "output": {
-          "out": {
-            "title": "Image",
-            "type": "Image"
-          }
-        }
-      },
-      "phrases": {
-        "active": "Reading image"
-      },
-      "description": "Read image",
-      "title": "Read Image",
-      "ns": "canvas",
-      "name": "readImage",
-      "fn": "output = function() {\n  var image = new $.module.Image()\n  image.src = fs.readFileSync($.path)\n\n  cb({\n    out: $.write('path', image)\n  });\n};\n"
     },
     {
       "ports": {

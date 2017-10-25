@@ -8,10 +8,6 @@ module.exports = {
   },
   ports: {
     input: {
-      module: {
-        title: "Module",
-        type: "function"
-      },
       path: {
         title: "Path",
         type: "string"
@@ -31,7 +27,7 @@ module.exports = {
   },
   fn: function loadImage(input, $, output, state, done, cb, on, canvas) {
     var r = function() {
-      $.module.loadImage($.path).then(function(image) {
+      canvas.loadImage($.path).then(function(image) {
           output({
             out: $.write('path', image)
           });

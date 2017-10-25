@@ -8,10 +8,6 @@ module.exports = {
   },
   ports: {
     input: {
-      module: {
-        title: "Canvas Module",
-        type: "function"
-      },
       width: {
         title: "Width",
         type: "number"
@@ -28,10 +24,15 @@ module.exports = {
       }
     }
   },
-  fn: function createCanvas(input, $, output, state, done, cb, on) {
+  dependencies: {
+    npm: {
+      canvas: require('canvas')
+    }
+  },
+  fn: function createCanvas(input, $, output, state, done, cb, on, canvas) {
     var r = function() {
       output({
-        out: $.create($.module.createCanvas())
+        out: $.create(canvas.createCanvas($.width, $.height))
       });
       done();
     }.call(this);

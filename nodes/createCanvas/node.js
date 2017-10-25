@@ -1,6 +1,6 @@
 output = function() {
   cb({
-    out: $.create($.module.createCanvas())
+    out: $.create(canvas.createCanvas($.width, $.height))
   });
   done();
 };

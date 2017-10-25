@@ -1,5 +1,5 @@
 output = function() {
-  $.module.loadImage($.path).then(function(image) {
+  canvas.loadImage($.path).then(function(image) {
     cb({
       out: $.write('path', image)
     });
