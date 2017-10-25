@@ -439,6 +439,54 @@
         "input": {
           "context": {
             "title": "Context",
+            "type": "CanvasRenderingContext2D"
+          },
+          "sx": {
+            "title": "Sx",
+            "type": "number",
+            "description": "The x coordinate of the upper left corner of the rectangle from which the ImageData will be extracted."
+          },
+          "sy": {
+            "title": "Sy",
+            "type": "number",
+            "description": "The y coordinate of the upper left corner of the rectangle from which the ImageData will be extracted."
+          },
+          "sw": {
+            "title": "Sw",
+            "type": "number",
+            "description": "The width of the rectangle from which the ImageData will be extracted."
+          },
+          "sh": {
+            "title": "Sh",
+            "type": "number",
+            "description": "The height of the rectangle from which the ImageData will be extracted."
+          }
+        },
+        "output": {
+          "context": {
+            "title": "Context",
+            "type": "CanvasRenderingContext2D"
+          },
+          "out": {
+            "title": "ImageData",
+            "type": "ImageData"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Getting image data"
+      },
+      "description": "Get Image Data",
+      "title": "Get Image Data",
+      "ns": "canvas",
+      "name": "getImageData",
+      "fn": "output = function() {\n  cb({\n    context: $.get('context'),\n    out: $.create($.context.getImageData($.sx, $.sy, $.sw, $.sh))\n  });\n};\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "context": {
+            "title": "Context",
             "async": true,
             "type": "CanvasRenderingContext2D",
             "required": true

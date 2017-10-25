@@ -10,6 +10,7 @@ module.exports = {
   drawImage: require('./drawImage'),
   fill: require('./fill'),
   getContext: require('./getContext'),
+  getImageData: require('./getImageData'),
   getLineDash: require('./getLineDash'),
   lineTo: require('./lineTo'),
   loadImage: require('./loadImage'),
