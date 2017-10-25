@@ -1,5 +1,6 @@
 module.exports = {
   beginPath: require('./beginPath'),
+  canvas: require('./canvas'),
   clearRect: require('./clearRect'),
   clip: require('./clip'),
   closePath: require('./closePath'),

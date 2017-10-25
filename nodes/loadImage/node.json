@@ -8,6 +8,10 @@
   },
   "ports": {
     "input": {
+      "module": {
+        "title": "Module",
+        "type": "function"
+      },
       "path": {
         "title": "Path",
         "type": "string"

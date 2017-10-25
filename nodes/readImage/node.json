@@ -8,6 +8,10 @@
   },
   "ports": {
     "input": {
+      "module": {
+        "title": "Canvas Module",
+        "type": "function"
+      },
       "path": {
         "title": "Path",
         "type": "string"
@@ -22,7 +26,6 @@
   },
   "dependencies": {
     "npm" : {
-      "canvas": "^2.0.0-alpha.5",
       "fs": "internal"
     }
   }

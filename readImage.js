@@ -8,6 +8,10 @@ module.exports = {
   },
   ports: {
     input: {
+      module: {
+        title: "Canvas Module",
+        type: "function"
+      },
       path: {
         title: "Path",
         type: "string"
@@ -22,13 +26,12 @@ module.exports = {
   },
   dependencies: {
     npm: {
-      canvas: require('canvas'),
       fs: require('fs')
     }
   },
-  fn: function readImage(input, $, output, state, done, cb, on, canvas, fs) {
+  fn: function readImage(input, $, output, state, done, cb, on, fs) {
     var r = function() {
-      var image = new canvas.Image()
+      var image = new $.module.Image()
       image.src = fs.readFileSync($.path)
 
       output({

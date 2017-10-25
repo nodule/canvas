@@ -1,0 +1,23 @@
+{
+  "name": "canvas",
+  "ns": "canvas",
+  "title": "Canvas module",
+  "description": "Provides the canvas module while multiple requires from different locations won't work",
+  "phrases": {
+    "active": "Requiring canvas module"
+  },
+  "ports": {
+    "input": {},
+    "output": {
+      "module": {
+        "title": "Canvas",
+        "type": "function"
+      }
+    }
+  },
+  "dependencies": {
+    "npm" : {
+      "canvas": "^2.0.0-alpha.5"
+    }
+  }
+}

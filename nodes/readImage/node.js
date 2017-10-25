@@ -1,5 +1,5 @@
 output = function() {
-  var image = new canvas.Image()
+  var image = new $.module.Image()
   image.src = fs.readFileSync($.path)
 
   cb({
