@@ -66,7 +66,17 @@ module.exports = {
   },
   fn: function putImageData(input, $, output, state, done, cb, on) {
     var r = function() {
-      $.context.putImageData($.in, $.dx, $.dy, $.dirtyX, $.dirtyY, $.dirtyWidth, $.dirtyHeight);
+      const props = ['dx', 'dy', 'dirtyX', 'dirtyY', 'dirtyWidth', 'dirtyHeight'];
+
+      const args = [$.in];
+
+      for (let i = 0; i < props.length; i++) {
+        if ($[props[i]] === undefined) break;
+
+        args.push($[props[i]])
+      }
+
+      $.context.putImageData.apply($.context, args);
 
       output({
         context: $.get('context'),

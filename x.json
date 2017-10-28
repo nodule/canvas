@@ -738,7 +738,7 @@
       "title": "Put Image Data",
       "ns": "canvas",
       "name": "putImageData",
-      "fn": "output = function() {\n  $.context.putImageData($.in, $.dx, $.dy, $.dirtyX, $.dirtyY, $.dirtyWidth, $.dirtyHeight);\n  \n  cb({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
+      "fn": "output = function() {\n  const props = ['dx', 'dy', 'dirtyX', 'dirtyY', 'dirtyWidth', 'dirtyHeight'];\n  \n  const args = [$.in];\n  \n  for (let i = 0; i < props.length; i++) {\n    if ($[props[i]] === undefined) break;\n    \n    args.push($[props[i]])\n  }\n  \n  $.context.putImageData.apply($.context, args);\n  \n  cb({\n    context: $.get('context'),\n    out: $.get('in')\n  });\n};\n"
     },
     {
       "ports": {
