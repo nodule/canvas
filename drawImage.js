@@ -9,7 +9,7 @@ module.exports = {
   },
   ports: {
     input: {
-      "in": {
+      context: {
         title: "Context",
         type: "CanvasRenderingContext2D"
       },
@@ -40,9 +40,9 @@ module.exports = {
               }
             }
 
-            $.in.drawImage.apply($.in, args);
+            $.context.drawImage.apply($.context, args);
             output({
-              out: $.get('in')
+              context: $.get('context')
             });
           }.call(this);
           return {
@@ -107,7 +107,7 @@ module.exports = {
       }
     },
     output: {
-      out: {
+      context: {
         title: "Context",
         type: "CanvasRenderingContext2D"
       }

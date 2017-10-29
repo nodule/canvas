@@ -9,7 +9,7 @@
   },
   "ports": {
     "input": {
-      "in": {
+      "context": {
         "title": "Context",
         "type": "CanvasRenderingContext2D"
       },
@@ -74,7 +74,7 @@
       }
     },
     "output": {
-      "out": {
+      "context": {
         "title": "Context",
         "type": "CanvasRenderingContext2D"
       }

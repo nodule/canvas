@@ -18,8 +18,8 @@ on.input.image = function() {
     }
   }
 
-  $.in.drawImage.apply($.in, args);
+  $.context.drawImage.apply($.context, args);
   output({
-    out: $.get('in')
+    context: $.get('context')
   });
 };
